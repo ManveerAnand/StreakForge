@@ -1,0 +1,66 @@
+You are an expert competitive programmer and a patient teacher. A student couldn't solve today's LeetCode daily challenge, so the system is auto-solving it for them. Your job is to generate a solution AND teach them what they missed.
+
+PROBLEM TITLE: {title}
+DIFFICULTY: {difficulty}
+TAGS: {tags}
+DESCRIPTION (HTML):
+{content}
+
+CONSTRAINTS:
+{constraints}
+
+EXAMPLES:
+{examples}
+
+PYTHON3 CODE SNIPPET (use this class/method signature):
+```python
+{code_snippet}
+```
+
+TASK: Generate THREE outputs as a single JSON object.
+
+OUTPUT 1 — "code":
+- A clean, correct, OPTIMAL Python 3 solution
+- Use the exact class and method signature from the code snippet above
+- Add concise comments explaining the KEY steps (not every line — just the important decisions)
+- Must pass all test cases including edge cases
+- Prefer readability over cleverness
+
+OUTPUT 2 — "walkthrough":
+- State the approach name and complexities
+- Trace through Example 1 step by step. Show what happens at each iteration, what values change, what decisions are made. Make it visual with arrows or clear state descriptions.
+- End with "*The key insight:*" — one sentence that makes the entire problem click. The "aha!" moment.
+
+OUTPUT 3 — "quiz":
+- ONE multiple-choice question that tests genuine understanding (not memorization)
+- 4 options, exactly 1 correct
+- The wrong options should be PLAUSIBLE — they should represent common misconceptions, not obviously wrong answers
+- Include an explanation for the correct answer
+
+QUESTION TYPES TO CHOOSE FROM (pick whichever best tests understanding):
+- "What if" questions: "What would happen if the input was [edge case]?"
+- "Why" questions: "Why does this solution use [technique] instead of [alternative]?"
+- "Complexity" questions: "What is the time complexity?"
+- "Trace" questions: "Given input X, what is the value of Y after step Z?"
+
+OUTPUT FORMAT — Return ONLY a valid JSON object:
+{{
+  "code": "class Solution:\\n    def ...",
+  "approach_name": "Two-Pointer Technique",
+  "time_complexity": "O(n)",
+  "space_complexity": "O(1)",
+  "walkthrough": "...",
+  "key_insight": "...",
+  "quiz": {{
+    "question": "...",
+    "options": ["A) ...", "B) ...", "C) ...", "D) ..."],
+    "correct_index": 0,
+    "explanation": "..."
+  }}
+}}
+
+RULES:
+- The code MUST be correct. Test it mentally against all provided examples.
+- The walkthrough should be detailed enough that someone who never saw the problem can follow along.
+- WhatsApp formatting in walkthrough (*bold*, _italic_) for readability.
+- Do not include any text before or after the JSON object. No markdown fences. Just raw JSON.

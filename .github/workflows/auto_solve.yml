@@ -1,0 +1,43 @@
+name: "🤖 Auto-Solve — Last Resort"
+
+on:
+  schedule:
+    # 11:45 PM IST = 18:15 UTC
+    - cron: "15 18 * * *"
+  workflow_dispatch: # Manual trigger for testing
+
+permissions:
+  contents: write
+
+jobs:
+  autosolve:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run auto-solve job
+        env:
+          LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
+          CSRF_TOKEN: ${{ secrets.CSRF_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
+          CALLMEBOT_API_KEY: ${{ secrets.CALLMEBOT_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m src.autosolve_job
+
+      - name: Commit state changes
+        run: |
+          git config user.name "StreakForge Bot"
+          git config user.email "bot@streakforge.dev"
+          git add state.json
+          git diff --quiet --cached || git commit -m "state: autosolve $(date -u +%Y-%m-%d)" && git push

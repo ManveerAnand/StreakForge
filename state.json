@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "week_start": "",
+  "auto_solves_this_week": 0,
+  "auto_solve_dates": [],
+  "today": {
+    "date": "",
+    "question_slug": "",
+    "question_title": "",
+    "difficulty": "",
+    "tags": [],
+    "is_solved": false,
+    "morning_sent": false,
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
+    "submissions_analyzed": [],
+    "auto_solved": false,
+    "quiz_sent": false,
+    "quiz_answered": false,
+    "quiz_correct": null,
+    "quiz_data": null
+  },
+  "session_last_verified": "",
+  "session_healthy": true,
+  "last_keepalive": ""
+}

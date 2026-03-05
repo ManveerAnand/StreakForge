@@ -1,0 +1,63 @@
+name: "🔑 Session Health Check"
+
+on:
+  schedule:
+    # Monday 1:00 AM IST = Sunday 19:30 UTC
+    - cron: "30 19 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check LeetCode session
+        env:
+          LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
+          CSRF_TOKEN: ${{ secrets.CSRF_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
+          CALLMEBOT_API_KEY: ${{ secrets.CALLMEBOT_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python -c "
+          import logging
+          logging.basicConfig(level=logging.INFO)
+          from src.leetcode_api import verify_session
+          from src.notifier import send_alert, notify
+          from src.state import load_state, save_state, mark_session_verified
+          from src.formatter import format_session_expired
+
+          state = load_state()
+          healthy = verify_session()
+          state = mark_session_verified(state, healthy)
+          save_state(state)
+
+          if not healthy:
+              send_alert(format_session_expired())
+              print('SESSION EXPIRED — Alert sent')
+          else:
+              notify('✅ *StreakForge Health Check*\n\nLeetCode session is healthy. All systems go.')
+              print('Session healthy ✓')
+          "
+
+      - name: Commit state changes
+        run: |
+          git config user.name "StreakForge Bot"
+          git config user.email "bot@streakforge.dev"
+          git add state.json
+          git diff --quiet --cached || git commit -m "state: health-check $(date -u +%Y-%m-%d)" && git push

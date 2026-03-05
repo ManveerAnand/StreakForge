@@ -1,0 +1,49 @@
+name: "⏰ Reminders — Check & Nudge"
+
+on:
+  schedule:
+    # 10:00 AM IST = 04:30 UTC
+    - cron: "30 4 * * *"
+    # 2:00 PM IST = 08:30 UTC
+    - cron: "30 8 * * *"
+    # 6:00 PM IST = 12:30 UTC
+    - cron: "30 12 * * *"
+    # 9:00 PM IST = 15:30 UTC
+    - cron: "30 15 * * *"
+  workflow_dispatch: # Manual trigger for testing
+
+permissions:
+  contents: write
+
+jobs:
+  reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run reminder job
+        env:
+          LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
+          CSRF_TOKEN: ${{ secrets.CSRF_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
+          CALLMEBOT_API_KEY: ${{ secrets.CALLMEBOT_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m src.reminder_job
+
+      - name: Commit state changes
+        run: |
+          git config user.name "StreakForge Bot"
+          git config user.email "bot@streakforge.dev"
+          git add state.json
+          git diff --quiet --cached || git commit -m "state: reminder $(date -u +%Y-%m-%dT%H:%M)" && git push
