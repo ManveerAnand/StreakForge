@@ -12,7 +12,7 @@
       "String"
     ],
     "is_solved": false,
-    "morning_sent": true,
+    "morning_sent": false,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
