@@ -7,6 +7,7 @@ Handles question decoding, hint generation, submission analysis, auto-solve, and
 import json
 import logging
 import os
+import time
 from pathlib import Path
 
 from google import genai
@@ -44,24 +45,34 @@ def _load_prompt(name: str) -> str:
     return path.read_text(encoding="utf-8")
 
 
-def _generate(prompt: str, thinking_level: str = GEMINI_THINKING_LOW) -> str:
+def _generate(prompt: str, thinking_level: str = GEMINI_THINKING_LOW, retries: int = 3) -> str:
     """
-    Generate content using Gemini.
+    Generate content using Gemini with automatic retry on 503/overload.
     thinking_level: 'low' for automation, 'high' for deep reasoning.
     """
     client = _get_client()
     model = GEMINI_MODEL_AUTOMATION if thinking_level == GEMINI_THINKING_LOW else GEMINI_MODEL_REASONING
 
-    response = client.models.generate_content(
-        model=model,
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            thinking_config=types.ThinkingConfig(
-                thinking_level=thinking_level),
-            temperature=0.7,
-        ),
-    )
-    return response.text
+    for attempt in range(1, retries + 1):
+        try:
+            response = client.models.generate_content(
+                model=model,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    thinking_config=types.ThinkingConfig(
+                        thinking_level=thinking_level),
+                    temperature=0.7,
+                ),
+            )
+            return response.text
+        except Exception as e:
+            error_str = str(e)
+            if ("503" in error_str or "UNAVAILABLE" in error_str or "overloaded" in error_str.lower()) and attempt < retries:
+                wait = 15 * attempt  # 15s, 30s, 45s
+                logger.warning("Gemini 503/overloaded (attempt %d/%d) — retrying in %ds...", attempt, retries, wait)
+                time.sleep(wait)
+            else:
+                raise
 
 
 # ──────────────────── Question Decoding ────────────────────

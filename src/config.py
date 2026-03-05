@@ -14,11 +14,11 @@ LEETCODE_SUBMIT_URL_TEMPLATE = "https://leetcode.com/problems/{slug}/submit/"
 LEETCODE_CHECK_URL_TEMPLATE = "https://leetcode.com/submissions/detail/{id}/check/"
 
 # Auth (from GitHub Secrets → env vars)
-LEETCODE_SESSION = os.getenv("LEETCODE_SESSION", "")
-CSRF_TOKEN = os.getenv("CSRF_TOKEN", "")
+LEETCODE_SESSION = os.getenv("LEETCODE_SESSION", "").strip()
+CSRF_TOKEN = os.getenv("CSRF_TOKEN", "").strip()
 
 # ─────────────────────────── Gemini AI ─────────────────────────
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 
 # Two-tier model setup: same model, different thinking levels
 GEMINI_MODEL_AUTOMATION = "gemini-3-flash-preview"       # Fast tasks
@@ -30,13 +30,13 @@ GEMINI_THINKING_HIGH = "high"
 # ─────────────────────────── Notifications ─────────────────────
 # WhatsApp (CallMeBot)
 CALLMEBOT_URL = "https://api.callmebot.com/whatsapp.php"
-CALLMEBOT_PHONE = os.getenv("CALLMEBOT_PHONE", "")
-CALLMEBOT_API_KEY = os.getenv("CALLMEBOT_API_KEY", "")
+CALLMEBOT_PHONE = os.getenv("CALLMEBOT_PHONE", "").strip()
+CALLMEBOT_API_KEY = os.getenv("CALLMEBOT_API_KEY", "").strip()
 
 # Telegram
 TELEGRAM_API_URL_TEMPLATE = "https://api.telegram.org/bot{token}"
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 
 # ─────────────────────────── Streak Rules ──────────────────────
 MAX_AUTO_SOLVES_PER_WEEK = 2
