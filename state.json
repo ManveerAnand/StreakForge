@@ -1,16 +1,18 @@
 {
   "version": 1,
-  "week_start": "",
+  "week_start": "2026-03-02",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "date": "2026-03-05",
+    "question_slug": "minimum-changes-to-make-alternating-binary-string",
+    "question_title": "Minimum Changes To Make Alternating Binary String",
+    "difficulty": "Easy",
+    "tags": [
+      "String"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
