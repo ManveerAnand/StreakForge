@@ -18,11 +18,33 @@ LEETCODE_SESSION = os.getenv("LEETCODE_SESSION", "").strip()
 CSRF_TOKEN = os.getenv("CSRF_TOKEN", "").strip()
 
 # ─────────────────────────── Gemini AI ─────────────────────────
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+# Multiple API keys for rotation (load-balance across free-tier quotas).
+# Supports:
+#   1. Comma-separated in GEMINI_API_KEYS: "key1,key2,key3"
+#   2. Individual secrets: GEMINI_API_KEY_1, GEMINI_API_KEY_2, ...
+#   3. Single key fallback: GEMINI_API_KEY
+def _load_gemini_keys() -> list[str]:
+    """Collect all Gemini API keys from environment variables."""
+    keys: list[str] = []
+    # Source 1: comma-separated
+    bulk = os.getenv("GEMINI_API_KEYS", "").strip()
+    if bulk:
+        keys.extend(k.strip() for k in bulk.split(",") if k.strip())
+    # Source 2: numbered GEMINI_API_KEY_1 .. GEMINI_API_KEY_10
+    for i in range(1, 11):
+        k = os.getenv(f"GEMINI_API_KEY_{i}", "").strip()
+        if k and k not in keys:
+            keys.append(k)
+    # Source 3: single key (backwards compat)
+    single = os.getenv("GEMINI_API_KEY", "").strip()
+    if single and single not in keys:
+        keys.append(single)
+    return keys
 
-# Two-tier model setup: same model, different thinking levels
-GEMINI_MODEL_AUTOMATION = "gemini-3-flash-preview"       # Fast tasks
-GEMINI_MODEL_REASONING = "gemini-3-flash-preview"        # Deep analysis
+GEMINI_API_KEYS: list[str] = _load_gemini_keys()
+
+# Model config — single model, different thinking levels
+GEMINI_MODEL = "gemini-3-flash-preview"
 GEMINI_THINKING_LOW = "low"       # For easy/medium decode, reminders
 # For hard decode, hints, submission analysis, auto-solve
 GEMINI_THINKING_HIGH = "high"

@@ -1,7 +1,7 @@
 """
 StreakForge — Gemini AI Client
-Two-tier AI: automation (thinking=low) and reasoning (thinking=high).
-Handles question decoding, hint generation, submission analysis, auto-solve, and quizzes.
+Multi-key rotation with automatic failover.
+Two thinking tiers: low (fast automation) and high (deep reasoning).
 """
 
 import json
@@ -14,9 +14,8 @@ from google import genai
 from google.genai import types
 
 from src.config import (
-    GEMINI_API_KEY,
-    GEMINI_MODEL_AUTOMATION,
-    GEMINI_MODEL_REASONING,
+    GEMINI_API_KEYS,
+    GEMINI_MODEL,
     GEMINI_THINKING_LOW,
     GEMINI_THINKING_HIGH,
     PROMPTS_DIR,
@@ -24,17 +23,30 @@ from src.config import (
 
 logger = logging.getLogger("streakforge.gemini")
 
-# ──────────────────── Client Setup ────────────────────
+# ──────────────────── Multi-Key Client Pool ────────────────────
 
-_client = None
+_clients: list[genai.Client] = []
+_current_key_idx: int = 0
 
 
-def _get_client() -> genai.Client:
-    """Lazy-init the Gemini client."""
-    global _client
-    if _client is None:
-        _client = genai.Client(api_key=GEMINI_API_KEY)
-    return _client
+def _init_clients() -> None:
+    """Build a client for each available API key."""
+    global _clients
+    if _clients:
+        return
+    if not GEMINI_API_KEYS:
+        raise RuntimeError("No Gemini API keys configured. Set GEMINI_API_KEYS, GEMINI_API_KEY_1..N, or GEMINI_API_KEY.")
+    _clients = [genai.Client(api_key=k) for k in GEMINI_API_KEYS]
+    logger.info("Initialized %d Gemini API key(s)", len(_clients))
+
+
+def _next_client() -> genai.Client:
+    """Round-robin to the next API key."""
+    global _current_key_idx
+    _init_clients()
+    client = _clients[_current_key_idx % len(_clients)]
+    _current_key_idx = (_current_key_idx + 1) % len(_clients)
+    return client
 
 
 def _load_prompt(name: str) -> str:
@@ -45,18 +57,35 @@ def _load_prompt(name: str) -> str:
     return path.read_text(encoding="utf-8")
 
 
-def _generate(prompt: str, thinking_level: str = GEMINI_THINKING_LOW, retries: int = 3) -> str:
-    """
-    Generate content using Gemini with automatic retry on 503/overload.
-    thinking_level: 'low' for automation, 'high' for deep reasoning.
-    """
-    client = _get_client()
-    model = GEMINI_MODEL_AUTOMATION if thinking_level == GEMINI_THINKING_LOW else GEMINI_MODEL_REASONING
+def _is_retryable(error_str: str) -> bool:
+    """Check if the error is a transient overload / quota issue."""
+    markers = ("503", "UNAVAILABLE", "overloaded", "429", "RESOURCE_EXHAUSTED", "quota")
+    lower = error_str.lower()
+    return any(m.lower() in lower for m in markers)
 
-    for attempt in range(1, retries + 1):
+
+def _generate(prompt: str, thinking_level: str = GEMINI_THINKING_LOW) -> str:
+    """
+    Generate content using Gemini with multi-key rotation.
+
+    Strategy:
+    1. Try the current key (round-robin).
+    2. On 503 / 429 / quota error → rotate to the next key immediately.
+    3. Cycle through ALL keys before giving up.
+    4. If every key fails, wait 20s and do one final sweep.
+    """
+    _init_clients()
+    num_keys = len(_clients)
+    # Total attempts = 2 full sweeps across all keys
+    max_attempts = num_keys * 2
+    last_error = None
+
+    for attempt in range(1, max_attempts + 1):
+        client = _next_client()
+        key_num = (_current_key_idx - 1) % num_keys + 1  # 1-indexed for logging
         try:
             response = client.models.generate_content(
-                model=model,
+                model=GEMINI_MODEL,
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     thinking_config=types.ThinkingConfig(
@@ -66,13 +95,30 @@ def _generate(prompt: str, thinking_level: str = GEMINI_THINKING_LOW, retries: i
             )
             return response.text
         except Exception as e:
+            last_error = e
             error_str = str(e)
-            if ("503" in error_str or "UNAVAILABLE" in error_str or "overloaded" in error_str.lower()) and attempt < retries:
-                wait = 15 * attempt  # 15s, 30s, 45s
-                logger.warning("Gemini 503/overloaded (attempt %d/%d) — retrying in %ds...", attempt, retries, wait)
-                time.sleep(wait)
+            if _is_retryable(error_str):
+                logger.warning(
+                    "Key #%d hit %s (attempt %d/%d) — rotating...",
+                    key_num,
+                    error_str[:80],
+                    attempt,
+                    max_attempts,
+                )
+                # Brief pause between rotations; longer pause between sweeps
+                if attempt == num_keys:
+                    logger.info("All keys exhausted in first sweep. Waiting 20s before retry sweep...")
+                    time.sleep(20)
+                else:
+                    time.sleep(2)
             else:
+                # Non-retryable error (auth, bad request, etc.) — fail fast
                 raise
+
+    raise RuntimeError(
+        f"All {num_keys} Gemini API key(s) exhausted after {max_attempts} attempts. "
+        f"Last error: {last_error}"
+    )
 
 
 # ──────────────────── Question Decoding ────────────────────

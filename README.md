@@ -131,7 +131,9 @@ Go to your fork → **Settings** → **Secrets and variables** → **Actions** �
 |--------|-------------|
 | `LEETCODE_SESSION` | Your LeetCode session cookie |
 | `CSRF_TOKEN` | Your LeetCode CSRF token |
-| `GEMINI_API_KEY` | Google AI Studio API key |
+| `GEMINI_API_KEY` | Google AI Studio API key (primary) |
+| `GEMINI_API_KEY_2` | *(Optional)* Second Gemini API key for rotation |
+| `GEMINI_API_KEY_3` | *(Optional)* Third Gemini API key for rotation |
 | `CALLMEBOT_PHONE` | Your phone number (with country code, e.g. `919876543210`) |
 | `CALLMEBOT_API_KEY` | CallMeBot API key (received via WhatsApp) |
 | `TELEGRAM_BOT_TOKEN` | Telegram bot token from BotFather |
