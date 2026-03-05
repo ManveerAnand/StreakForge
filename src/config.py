@@ -73,11 +73,12 @@ REMINDER_TIMES_IST = ["10:00", "14:00", "18:00", "21:00"]
 AUTO_SOLVE_TIME_IST = "23:45"
 
 # Hint levels mapped to reminder slots (for time-drip on hard questions)
+# 4 reminder slots deliver hints 1-4; hint 5 is reserved for on-demand via Telegram.
 HINT_DRIP_SCHEDULE = {
-    "10:00": 2,  # Level 2 hint at 10 AM
-    "14:00": 3,  # Level 3 hint at 2 PM
-    "18:00": 4,  # Level 4 hint at 6 PM
-    "21:00": 5,  # Level 5 hint at 9 PM
+    "10:00": 1,  # Hint 1 (Pattern Recognition) at 10 AM
+    "14:00": 2,  # Hint 2 (Approach Direction) at 2 PM
+    "18:00": 3,  # Hint 3 (Key Mechanics) at 6 PM
+    "21:00": 4,  # Hint 4 (Implementation Nudge) at 9 PM
 }
 
 # ─────────────────────────── Paths ─────────────────────────────

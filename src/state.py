@@ -195,28 +195,43 @@ def store_hints(state: dict, hints: list[str]) -> dict:
     """Store the generated hint sequence for today's hard question."""
     state["today"]["hints_generated"] = True
     state["today"]["hints_cache"] = hints
-    # Level 1 is the morning message itself
-    state["today"]["current_hint_level"] = 1
-    state["today"]["hints_delivered"] = [1]
+    # Start at level 0 — no hints delivered yet.
+    # The morning message is separate from hints; hints 1-5 are dripped later.
+    state["today"]["current_hint_level"] = 0
+    state["today"]["hints_delivered"] = []
     return state
 
 
-def advance_hint_level(state: dict) -> tuple[dict, str | None]:
+def advance_hint_level(state: dict, target_level: int | None = None) -> tuple[dict, list[str]]:
     """
-    Advance to the next hint level and return the hint text.
-    Returns (updated_state, hint_text) or (state, None) if no more hints.
+    Advance hint level and return all newly-unlocked hint texts.
+
+    If target_level is given, advance up to that level (useful when a
+    reminder slot maps to level 3 but current is 0 — delivers 1, 2, 3).
+    Otherwise advances by exactly one level.
+
+    Returns (updated_state, [hint_texts]) — empty list if no new hints.
     """
     current = state["today"]["current_hint_level"]
     hints = state["today"]["hints_cache"]
+    total = min(len(hints), 5)
 
-    next_level = current + 1
-    if next_level > 5 or next_level - 1 >= len(hints):
-        return state, None  # No more hints
+    if target_level is None:
+        target_level = current + 1
+    target_level = min(target_level, total)
 
-    hint_text = hints[next_level - 1]  # hints[0] = level 1, etc.
-    state["today"]["current_hint_level"] = next_level
-    state["today"]["hints_delivered"].append(next_level)
-    return state, hint_text
+    if target_level <= current:
+        return state, []
+
+    new_hints: list[str] = []
+    for level in range(current + 1, target_level + 1):
+        idx = level - 1  # hints[0] = level 1
+        if idx < len(hints):
+            new_hints.append(hints[idx])
+            state["today"]["hints_delivered"].append(level)
+
+    state["today"]["current_hint_level"] = target_level
+    return state, new_hints
 
 
 def mark_solved(state: dict) -> dict:

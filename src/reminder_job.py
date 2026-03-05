@@ -202,14 +202,17 @@ def run():
         current_level = get_current_hint_level(state)
 
         if target_level > current_level:
-            state, hint_text = advance_hint_level(state)
-            if hint_text:
-                has_more = get_current_hint_level(state) < 5
+            start_level = current_level + 1
+            state, new_hints = advance_hint_level(state, target_level)
+            for i, hint_text in enumerate(new_hints):
+                level = start_level + i
+                has_more = level < 5
                 hint_msg = formatter.format_hint_message(
-                    title, get_current_hint_level(state), hint_text, has_more)
+                    title, level, hint_text, has_more)
                 messages.append(hint_msg)
-                logger.info("Dripped hint level %d",
-                            get_current_hint_level(state))
+            if new_hints:
+                logger.info("Dripped %d hint(s), now at level %d",
+                            len(new_hints), get_current_hint_level(state))
 
     # 4. Send all messages
     combined = "\n\n───────────────\n\n".join(messages)
