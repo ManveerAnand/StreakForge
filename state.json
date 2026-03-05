@@ -11,8 +11,8 @@
     "tags": [
       "String"
     ],
-    "is_solved": false,
-    "morning_sent": false,
+    "is_solved": true,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
