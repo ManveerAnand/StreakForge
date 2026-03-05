@@ -4,7 +4,7 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-03-05",
+    "date": "2026-03-06",
     "question_slug": "minimum-changes-to-make-alternating-binary-string",
     "question_title": "Minimum Changes To Make Alternating Binary String",
     "difficulty": "Easy",
@@ -17,9 +17,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
