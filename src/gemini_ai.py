@@ -7,6 +7,7 @@ Two thinking tiers: low (fast automation) and high (deep reasoning).
 import json
 import logging
 import os
+import re
 import time
 from pathlib import Path
 
@@ -35,7 +36,8 @@ def _init_clients() -> None:
     if _clients:
         return
     if not GEMINI_API_KEYS:
-        raise RuntimeError("No Gemini API keys configured. Set GEMINI_API_KEYS, GEMINI_API_KEY_1..N, or GEMINI_API_KEY.")
+        raise RuntimeError(
+            "No Gemini API keys configured. Set GEMINI_API_KEYS, GEMINI_API_KEY_1..N, or GEMINI_API_KEY.")
     _clients = [genai.Client(api_key=k) for k in GEMINI_API_KEYS]
     logger.info("Initialized %d Gemini API key(s)", len(_clients))
 
@@ -57,9 +59,38 @@ def _load_prompt(name: str) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def _extract_code_from_raw(raw: str) -> str:
+    """
+    Best-effort extraction of Python code from a malformed AI response.
+    Tries, in order:
+    1. Code inside ```python ... ``` fences
+    2. Code inside ```...``` fences that contains 'class Solution'
+    3. Everything from 'class Solution' to the end
+    """
+    # Try: ```python\n...\n```
+    match = re.search(r"```python\s*\n(.*?)```", raw, re.DOTALL)
+    if match:
+        return match.group(1).strip()
+
+    # Try: any fenced block with class Solution
+    match = re.search(r"```\w*\s*\n(.*?class Solution.*?)```", raw, re.DOTALL)
+    if match:
+        return match.group(1).strip()
+
+    # Fallback: grab from 'class Solution' to the end (or next non-code section)
+    match = re.search(r"(class Solution.*?)(?:\n\n[A-Z]|\Z)", raw, re.DOTALL)
+    if match:
+        return match.group(1).strip()
+
+    # Nothing worked — return raw and hope for the best
+    logger.warning("Could not extract code from raw AI response")
+    return raw.strip()
+
+
 def _is_retryable(error_str: str) -> bool:
     """Check if the error is a transient overload / quota issue."""
-    markers = ("503", "UNAVAILABLE", "overloaded", "429", "RESOURCE_EXHAUSTED", "quota")
+    markers = ("503", "UNAVAILABLE", "overloaded",
+               "429", "RESOURCE_EXHAUSTED", "quota")
     lower = error_str.lower()
     return any(m.lower() in lower for m in markers)
 
@@ -82,7 +113,8 @@ def _generate(prompt: str, thinking_level: str = GEMINI_THINKING_LOW) -> str:
 
     for attempt in range(1, max_attempts + 1):
         client = _next_client()
-        key_num = (_current_key_idx - 1) % num_keys + 1  # 1-indexed for logging
+        key_num = (_current_key_idx - 1) % num_keys + \
+            1  # 1-indexed for logging
         try:
             response = client.models.generate_content(
                 model=GEMINI_MODEL,
@@ -107,7 +139,8 @@ def _generate(prompt: str, thinking_level: str = GEMINI_THINKING_LOW) -> str:
                 )
                 # Brief pause between rotations; longer pause between sweeps
                 if attempt == num_keys:
-                    logger.info("All keys exhausted in first sweep. Waiting 20s before retry sweep...")
+                    logger.info(
+                        "All keys exhausted in first sweep. Waiting 20s before retry sweep...")
                     time.sleep(20)
                 else:
                     time.sleep(2)
@@ -284,10 +317,11 @@ def generate_solution(
             cleaned = cleaned.strip()
         return json.loads(cleaned)
     except json.JSONDecodeError:
-        logger.error("Failed to parse auto-solve response as JSON.")
-        # Return minimal structure so the flow doesn't crash
+        logger.error("Failed to parse auto-solve response as JSON. Attempting code extraction...")
+        # Try to extract just the Python code from the raw response
+        code = _extract_code_from_raw(raw)
         return {
-            "code": raw,
+            "code": code,
             "approach_name": "Unknown",
             "time_complexity": "Unknown",
             "space_complexity": "Unknown",

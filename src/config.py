@@ -23,6 +23,8 @@ CSRF_TOKEN = os.getenv("CSRF_TOKEN", "").strip()
 #   1. Comma-separated in GEMINI_API_KEYS: "key1,key2,key3"
 #   2. Individual secrets: GEMINI_API_KEY_1, GEMINI_API_KEY_2, ...
 #   3. Single key fallback: GEMINI_API_KEY
+
+
 def _load_gemini_keys() -> list[str]:
     """Collect all Gemini API keys from environment variables."""
     keys: list[str] = []
@@ -40,6 +42,7 @@ def _load_gemini_keys() -> list[str]:
     if single and single not in keys:
         keys.append(single)
     return keys
+
 
 GEMINI_API_KEYS: list[str] = _load_gemini_keys()
 
