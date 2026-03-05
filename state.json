@@ -17,7 +17,9 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [],
+    "reminders_sent": [
+      "21:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
