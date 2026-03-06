@@ -11,15 +11,13 @@
     "tags": [
       "String"
     ],
-    "is_solved": true,
-    "morning_sent": true,
+    "is_solved": false,
+    "morning_sent": false,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
