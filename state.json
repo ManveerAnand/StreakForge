@@ -13,14 +13,15 @@
       "Dynamic Programming",
       "Sliding Window"
     ],
-    "is_solved": false,
+    "is_solved": true,
     "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
     "reminders_sent": [
-      "10:00"
+      "10:00",
+      "14:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
