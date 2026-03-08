@@ -4,27 +4,23 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-03-07",
-    "question_slug": "minimum-number-of-flips-to-make-the-binary-string-alternating",
-    "question_title": "Minimum Number of Flips to Make the Binary String Alternating",
+    "date": "2026-03-08",
+    "question_slug": "find-unique-binary-string",
+    "question_title": "Find Unique Binary String",
     "difficulty": "Medium",
     "tags": [
+      "Array",
+      "Hash Table",
       "String",
-      "Dynamic Programming",
-      "Sliding Window"
+      "Backtracking"
     ],
-    "is_solved": true,
+    "is_solved": false,
     "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
