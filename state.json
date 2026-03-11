@@ -4,32 +4,20 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-03-10",
-    "question_slug": "find-all-possible-stable-binary-arrays-ii",
-    "question_title": "Find All Possible Stable Binary Arrays II",
-    "difficulty": "Hard",
+    "date": "2026-03-11",
+    "question_slug": "complement-of-base-10-integer",
+    "question_title": "Complement of Base 10 Integer",
+    "difficulty": "Easy",
     "tags": [
-      "Dynamic Programming",
-      "Prefix Sum"
+      "Bit Manipulation"
     ],
-    "is_solved": true,
+    "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This is a counting problem with overlapping sub-problems, which is a classic signal for Dynamic Programming. You'll want to build a table that tracks how many 0s and 1s you've used so far.",
-      "Since the 'limit' rule depends on what you just placed, your state needs to know the last digit used. Try defining your state as the number of ways to use 'i' zeros and 'j' ones, ending specifically with a 0 or a 1.",
-      "To calculate the current state, you'd normally look back at previous states. For example, to end in a 0, you could add a 0 to any valid sequence ending in 1, or any valid sequence ending in 0—as long as that doesn't create too long a streak.",
-      "The 'Hard' part is doing this efficiently. Instead of checking every possible streak length (which is slow), think about the total ways to end in 0 as 'everything that was valid one step ago' minus the specific cases that would now exceed the 'limit'.",
-      "Conceptually, the number of ways to end with a 0 using (i, j) is the sum of ways to end with 0 or 1 at (i-1, j), but you must subtract the sequences that already had a streak of 'limit' zeros, because adding one more 0 would break the rule. This subtraction logic keeps your solution running in square time."
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
