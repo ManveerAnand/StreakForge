@@ -25,12 +25,14 @@
       "To check if 'X' is possible, use a Union-Find (DSU) structure. First, add all mandatory edges. Then, greedily add optional edges that are already at least 'X'. Finally, use your 'k' upgrades on any remaining edges that only reach 'X' after doubling.",
       "The target 'X' is valid if: 1) Mandatory edges don't form cycles, 2) All mandatory edges are >= 'X', and 3) You can connect all nodes into one component using mandatory edges, free optional edges, and at most 'k' upgraded edges."
     ],
-    "current_hint_level": 1,
+    "current_hint_level": 2,
     "hints_delivered": [
-      1
+      1,
+      2
     ],
     "reminders_sent": [
-      "10:00"
+      "10:00",
+      "14:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
