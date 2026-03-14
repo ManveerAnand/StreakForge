@@ -4,16 +4,13 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-03-13",
-    "question_slug": "minimum-number-of-seconds-to-make-mountain-height-zero",
-    "question_title": "Minimum Number of Seconds to Make Mountain Height Zero",
+    "date": "2026-03-14",
+    "question_slug": "the-k-th-lexicographical-string-of-all-happy-strings-of-length-n",
+    "question_title": "The k-th Lexicographical String of All Happy Strings of Length n",
     "difficulty": "Medium",
     "tags": [
-      "Array",
-      "Math",
-      "Binary Search",
-      "Greedy",
-      "Heap (Priority Queue)"
+      "String",
+      "Backtracking"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -21,12 +18,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
