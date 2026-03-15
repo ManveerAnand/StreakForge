@@ -4,26 +4,28 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-03-14",
-    "question_slug": "the-k-th-lexicographical-string-of-all-happy-strings-of-length-n",
-    "question_title": "The k-th Lexicographical String of All Happy Strings of Length n",
-    "difficulty": "Medium",
+    "date": "2026-03-15",
+    "question_slug": "fancy-sequence",
+    "question_title": "Fancy Sequence",
+    "difficulty": "Hard",
     "tags": [
-      "String",
-      "Backtracking"
+      "Math",
+      "Design",
+      "Segment Tree"
     ],
-    "is_solved": true,
+    "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This problem fits the 'Lazy Transformation' pattern. Instead of updating every element in the array, think about how to maintain a global state that represents all the operations performed so far.",
+      "Notice that any combination of additions and multiplications results in a linear transformation: f(x) = (a * x) + b. You can maintain these two global variables, 'a' (multiplier) and 'b' (increment), and update them with every operation.",
+      "The challenge is the 'append' operation. A new number shouldn't be affected by operations that happened before it was added. How can you store a new number such that the *current* global transformation effectively ignores its own history for that specific index?",
+      "To 'undo' the current global transformation for a new element, you'll need modular division. Since 10^9 + 7 is a prime number, you can use Fermat's Little Theorem to find the modular inverse of your global multiplier.",
+      "When you append a value, transform it by subtracting the current increment and then multiplying by the modular inverse of the current multiplier. When calling getIndex, simply apply the latest global multiplier and increment to this 'normalized' stored value."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
