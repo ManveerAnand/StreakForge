@@ -13,7 +13,7 @@
       "Design",
       "Segment Tree"
     ],
-    "is_solved": false,
+    "is_solved": true,
     "morning_sent": true,
     "hints_generated": true,
     "hints_cache": [
@@ -25,7 +25,9 @@
     ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [],
+    "reminders_sent": [
+      "10:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
