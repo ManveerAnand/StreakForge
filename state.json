@@ -1,36 +1,28 @@
 {
   "version": 1,
-  "week_start": "2026-03-09",
+  "week_start": "2026-03-16",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-03-15",
-    "question_slug": "fancy-sequence",
-    "question_title": "Fancy Sequence",
-    "difficulty": "Hard",
+    "date": "2026-03-16",
+    "question_slug": "get-biggest-three-rhombus-sums-in-a-grid",
+    "question_title": "Get Biggest Three Rhombus Sums in a Grid",
+    "difficulty": "Medium",
     "tags": [
+      "Array",
       "Math",
-      "Design",
-      "Segment Tree"
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Matrix",
+      "Prefix Sum"
     ],
-    "is_solved": true,
+    "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This problem fits the 'Lazy Transformation' pattern. Instead of updating every element in the array, think about how to maintain a global state that represents all the operations performed so far.",
-      "Notice that any combination of additions and multiplications results in a linear transformation: f(x) = (a * x) + b. You can maintain these two global variables, 'a' (multiplier) and 'b' (increment), and update them with every operation.",
-      "The challenge is the 'append' operation. A new number shouldn't be affected by operations that happened before it was added. How can you store a new number such that the *current* global transformation effectively ignores its own history for that specific index?",
-      "To 'undo' the current global transformation for a new element, you'll need modular division. Since 10^9 + 7 is a prime number, you can use Fermat's Little Theorem to find the modular inverse of your global multiplier.",
-      "When you append a value, transform it by subtracting the current increment and then multiplying by the modular inverse of the current multiplier. When calling getIndex, simply apply the latest global multiplier and increment to this 'normalized' stored value."
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
