@@ -4,27 +4,21 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-03-21",
-    "question_slug": "flip-square-submatrix-vertically",
-    "question_title": "Flip Square Submatrix Vertically",
+    "date": "2026-03-22",
+    "question_slug": "determine-whether-matrix-can-be-obtained-by-rotation",
+    "question_title": "Determine Whether Matrix Can Be Obtained By Rotation",
     "difficulty": "Easy",
     "tags": [
       "Array",
-      "Two Pointers",
       "Matrix"
     ],
-    "is_solved": true,
+    "is_solved": false,
     "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
