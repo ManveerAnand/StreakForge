@@ -25,16 +25,18 @@
       "To solve this efficiently, process horizontal cuts and vertical cuts separately. As you move the cut line row by row, maintain a frequency map (or hash set) of all values currently in the 'top' section and another for the 'bottom' section. This allows you to check for the required 'discount' value in O(1).",
       "When a section is 1D (only 1 row or 1 column), your search is limited: only the two cells at the very ends of that row or column are valid candidates for removal. When it's 2D, you can check your frequency map for the target value. If the target exists and satisfies the connectivity rule, you've found your answer!"
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "10:00",
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
