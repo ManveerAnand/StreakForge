@@ -4,40 +4,23 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-03-26",
-    "question_slug": "equal-sum-grid-partition-ii",
-    "question_title": "Equal Sum Grid Partition II",
-    "difficulty": "Hard",
+    "date": "2026-03-27",
+    "question_slug": "matrix-similarity-after-cyclic-shifts",
+    "question_title": "Matrix Similarity After Cyclic Shifts",
+    "difficulty": "Easy",
     "tags": [
       "Array",
-      "Hash Table",
+      "Math",
       "Matrix",
-      "Enumeration",
-      "Prefix Sum"
+      "Simulation"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This problem is about efficient searching and prefix sums. Since you can only cut horizontally or vertically, you can iterate through all possible cut positions and calculate the total sum of the two resulting rectangles in constant time.",
-      "Focus on the 'discounting' rule. For a specific cut, if the sums aren't equal, you need to find a cell in the larger section whose value equals the difference between the two sums. This is a classic 'target value' search using a Hash Table.",
-      "The 'connectivity' constraint is simpler than it looks. In a rectangular section, removing a cell only breaks connectivity if the section is a single row or column and you remove a cell from the middle. If a section has both multiple rows and multiple columns, any cell can be removed safely.",
-      "To solve this efficiently, process horizontal cuts and vertical cuts separately. As you move the cut line row by row, maintain a frequency map (or hash set) of all values currently in the 'top' section and another for the 'bottom' section. This allows you to check for the required 'discount' value in O(1).",
-      "When a section is 1D (only 1 row or 1 column), your search is limited: only the two cells at the very ends of that row or column are valid candidates for removal. When it's 2D, you can check your frequency map for the target value. If the target exists and satisfies the connectivity rule, you've found your answer!"
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
