@@ -26,9 +26,13 @@
       "To verify your string, you need to reconstruct the LCP matrix from your candidate string using dynamic programming. The core logic is: if word[i] == word[j], then their LCP is 1 plus the LCP of the suffixes starting at i+1 and j+1.",
       "Finally, compare your reconstructed matrix with the input. If they match perfectly, and you didn't need more than 26 letters, you've found your answer; otherwise, no such string exists."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 1,
+    "hints_delivered": [
+      1
+    ],
+    "reminders_sent": [
+      "10:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
