@@ -4,41 +4,20 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-03-28",
-    "question_slug": "find-the-string-with-lcp",
-    "question_title": "Find the String with LCP",
-    "difficulty": "Hard",
+    "date": "2026-03-29",
+    "question_slug": "check-if-strings-can-be-made-equal-with-operations-i",
+    "question_title": "Check if Strings Can be Made Equal With Operations I",
+    "difficulty": "Easy",
     "tags": [
-      "Array",
-      "String",
-      "Dynamic Programming",
-      "Greedy",
-      "Union-Find",
-      "Matrix"
+      "String"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This is a greedy construction problem. To get the lexicographically smallest string, we should try to assign 'a' to as many positions as possible, then 'b', and so on, up to 'z'.",
-      "Focus on the requirement that if lcp[i][j] > 0, then the characters at index i and index j must be identical. You can iterate through the indices and 'group' them under the same character if the matrix says they match.",
-      "Once you've built a candidate string, you can't just trust it! The greedy step only ensures characters match where the matrix says they should, but it doesn't guarantee they *don't* match where the matrix says they shouldn't.",
-      "To verify your string, you need to reconstruct the LCP matrix from your candidate string using dynamic programming. The core logic is: if word[i] == word[j], then their LCP is 1 plus the LCP of the suffixes starting at i+1 and j+1.",
-      "Finally, compare your reconstructed matrix with the input. If they match perfectly, and you didn't need more than 26 letters, you've found your answer; otherwise, no such string exists."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
