@@ -1,15 +1,17 @@
 {
   "version": 1,
-  "week_start": "2026-03-23",
+  "week_start": "2026-03-30",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-03-29",
-    "question_slug": "check-if-strings-can-be-made-equal-with-operations-i",
-    "question_title": "Check if Strings Can be Made Equal With Operations I",
-    "difficulty": "Easy",
+    "date": "2026-03-30",
+    "question_slug": "check-if-strings-can-be-made-equal-with-operations-ii",
+    "question_title": "Check if Strings Can be Made Equal With Operations II",
+    "difficulty": "Medium",
     "tags": [
-      "String"
+      "Hash Table",
+      "String",
+      "Sorting"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -17,12 +19,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
