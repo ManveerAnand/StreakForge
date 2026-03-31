@@ -4,27 +4,28 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-03-30",
-    "question_slug": "check-if-strings-can-be-made-equal-with-operations-ii",
-    "question_title": "Check if Strings Can be Made Equal With Operations II",
-    "difficulty": "Medium",
+    "date": "2026-03-31",
+    "question_slug": "lexicographically-smallest-generated-string",
+    "question_title": "Lexicographically Smallest Generated String",
+    "difficulty": "Hard",
     "tags": [
-      "Hash Table",
       "String",
-      "Sorting"
+      "Greedy",
+      "String Matching"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This problem is a Greedy construction task. You should start by satisfying the most restrictive constraints (the 'T' positions) and then fill in the rest as cheaply as possible.",
+      "Try creating an array to represent your final string and a way to 'lock' certain characters. For every 'T' in the input, place the required sub-word into your array. If you ever find two 'T' requirements demanding different characters for the same spot, you know immediately that no solution exists.",
+      "Once the 'T' positions are filled, you have a skeleton. To make the string lexicographically smallest, fill every remaining empty (unlocked) slot with the character 'a'.",
+      "Now, check the 'F' positions. If a forbidden sub-word actually appears at an 'F' index, you must change at least one character in that range. To keep the string as 'small' as possible, which index in that range is the best one to change, and what should you change it to?",
+      "The best strategy for an 'F' violation is to change the very last character of the forbidden substring that isn't 'locked' by a 'T'. Change it to the smallest possible character (like 'b') that breaks the match. If every single character in an 'F' range is locked by 'T' requirements and they happen to form the forbidden word, then a valid string is impossible."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
