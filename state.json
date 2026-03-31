@@ -23,14 +23,16 @@
       "Now, check the 'F' positions. If a forbidden sub-word actually appears at an 'F' index, you must change at least one character in that range. To keep the string as 'small' as possible, which index in that range is the best one to change, and what should you change it to?",
       "The best strategy for an 'F' violation is to change the very last character of the forbidden substring that isn't 'locked' by a 'T'. Change it to the smallest possible character (like 'b') that breaks the match. If every single character in an 'F' range is locked by 'T' requirements and they happen to form the forbidden word, then a valid string is impossible."
     ],
-    "current_hint_level": 2,
+    "current_hint_level": 3,
     "hints_delivered": [
       1,
-      2
+      2,
+      3
     ],
     "reminders_sent": [
       "10:00",
-      "14:00"
+      "14:00",
+      "18:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
