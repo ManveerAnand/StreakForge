@@ -4,38 +4,29 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-03-31",
-    "question_slug": "lexicographically-smallest-generated-string",
-    "question_title": "Lexicographically Smallest Generated String",
+    "date": "2026-04-01",
+    "question_slug": "robot-collisions",
+    "question_title": "Robot Collisions",
     "difficulty": "Hard",
     "tags": [
-      "String",
-      "Greedy",
-      "String Matching"
+      "Array",
+      "Stack",
+      "Sorting",
+      "Simulation"
     ],
     "is_solved": false,
     "morning_sent": true,
     "hints_generated": true,
     "hints_cache": [
-      "This problem is a Greedy construction task. You should start by satisfying the most restrictive constraints (the 'T' positions) and then fill in the rest as cheaply as possible.",
-      "Try creating an array to represent your final string and a way to 'lock' certain characters. For every 'T' in the input, place the required sub-word into your array. If you ever find two 'T' requirements demanding different characters for the same spot, you know immediately that no solution exists.",
-      "Once the 'T' positions are filled, you have a skeleton. To make the string lexicographically smallest, fill every remaining empty (unlocked) slot with the character 'a'.",
-      "Now, check the 'F' positions. If a forbidden sub-word actually appears at an 'F' index, you must change at least one character in that range. To keep the string as 'small' as possible, which index in that range is the best one to change, and what should you change it to?",
-      "The best strategy for an 'F' violation is to change the very last character of the forbidden substring that isn't 'locked' by a 'T'. Change it to the smallest possible character (like 'b') that breaks the match. If every single character in an 'F' range is locked by 'T' requirements and they happen to form the forbidden word, then a valid string is impossible."
+      "This problem is a simulation that relies on physical sequence. Since robots only hit what is directly in front of them, start by sorting the robots based on their actual positions on the line.",
+      "Notice that collisions only occur when a robot moving Right is to the left of a robot moving Left. If a robot is moving Left and everyone to its left is also moving Left, no more collisions can happen for that robot.",
+      "Think about processing the sorted robots one by one. A robot moving Right is a 'pending' threat, while a robot moving Left is an 'active' participant that might smash into those pending threats.",
+      "Use a stack to keep track of the robots moving Right. When you encounter a robot moving Left, compare its health to the top of the stack and resolve the 'battle' until one is destroyed or the stack is empty.",
+      "To return the healths in the original order, keep track of each robot's initial index. After processing all collisions, collect the survivors from your stack and any 'unchallenged' Left-movers, then sort them by their original index."
     ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
