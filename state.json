@@ -24,9 +24,13 @@
       "Use a stack to keep track of the robots moving Right. When you encounter a robot moving Left, compare its health to the top of the stack and resolve the 'battle' until one is destroyed or the stack is empty.",
       "To return the healths in the original order, keep track of each robot's initial index. After processing all collisions, collect the survivors from your stack and any 'unchallenged' Left-movers, then sort them by their original index."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 1,
+    "hints_delivered": [
+      1
+    ],
+    "reminders_sent": [
+      "10:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
