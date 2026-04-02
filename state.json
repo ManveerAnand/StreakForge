@@ -4,39 +4,22 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-04-01",
-    "question_slug": "robot-collisions",
-    "question_title": "Robot Collisions",
-    "difficulty": "Hard",
+    "date": "2026-04-02",
+    "question_slug": "maximum-amount-of-money-robot-can-earn",
+    "question_title": "Maximum Amount of Money Robot Can Earn",
+    "difficulty": "Medium",
     "tags": [
       "Array",
-      "Stack",
-      "Sorting",
-      "Simulation"
+      "Dynamic Programming",
+      "Matrix"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This problem is a simulation that relies on physical sequence. Since robots only hit what is directly in front of them, start by sorting the robots based on their actual positions on the line.",
-      "Notice that collisions only occur when a robot moving Right is to the left of a robot moving Left. If a robot is moving Left and everyone to its left is also moving Left, no more collisions can happen for that robot.",
-      "Think about processing the sorted robots one by one. A robot moving Right is a 'pending' threat, while a robot moving Left is an 'active' participant that might smash into those pending threats.",
-      "Use a stack to keep track of the robots moving Right. When you encounter a robot moving Left, compare its health to the top of the stack and resolve the 'battle' until one is destroyed or the stack is empty.",
-      "To return the healths in the original order, keep track of each robot's initial index. After processing all collisions, collect the survivors from your stack and any 'unchallenged' Left-movers, then sort them by their original index."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
