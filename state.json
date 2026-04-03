@@ -24,14 +24,16 @@
       "The 'unique' wall rule is tricky: if robot A shoots right and robot B shoots left into the same gap, they might overlap. Your state needs to track the direction of the previous robot to handle that middle ground correctly.",
       "Create a DP table storing the max walls destroyed up to robot i for each direction. For each step, calculate the new walls hit by the current robot, ensuring you calculate the union of walls if two robots fire into the same gap."
     ],
-    "current_hint_level": 2,
+    "current_hint_level": 3,
     "hints_delivered": [
       1,
-      2
+      2,
+      3
     ],
     "reminders_sent": [
       "10:00",
-      "14:00"
+      "14:00",
+      "18:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
