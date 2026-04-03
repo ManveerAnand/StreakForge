@@ -4,27 +4,29 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-04-02",
-    "question_slug": "maximum-amount-of-money-robot-can-earn",
-    "question_title": "Maximum Amount of Money Robot Can Earn",
-    "difficulty": "Medium",
+    "date": "2026-04-03",
+    "question_slug": "maximum-walls-destroyed-by-robots",
+    "question_title": "Maximum Walls Destroyed by Robots",
+    "difficulty": "Hard",
     "tags": [
       "Array",
+      "Binary Search",
       "Dynamic Programming",
-      "Matrix"
+      "Sorting"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This problem is all about order and boundaries. Since robots block bullets, sorting both the robots and the walls by their positions is the essential first step to making sense of the possible ranges.",
+      "Notice that a robot's decision only affects its immediate neighbors. This local dependency is a classic sign that you can solve the problem by building up from smaller subproblems using Dynamic Programming.",
+      "To count walls efficiently, use binary search on your sorted walls array. This allows you to find exactly how many walls fall within a robot's reach (constrained by its range and the neighboring robots) in logarithmic time.",
+      "The 'unique' wall rule is tricky: if robot A shoots right and robot B shoots left into the same gap, they might overlap. Your state needs to track the direction of the previous robot to handle that middle ground correctly.",
+      "Create a DP table storing the max walls destroyed up to robot i for each direction. For each step, calculate the new walls hit by the current robot, ensuring you calculate the union of walls if two robots fire into the same gap."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
