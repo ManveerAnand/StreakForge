@@ -22,9 +22,13 @@
       "To handle small k efficiently, use a 'multiplicative difference array' for each remainder. You'll multiply by V at the start index and 'undo' the multiplication after the end index using a modular inverse.",
       "The final algorithm: Process large-k queries directly. For small k, use prefix products on interleaved sub-sequences to find the total multiplier for every index. Finally, multiply each original number by its total multiplier and XOR them all together."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 1,
+    "hints_delivered": [
+      1
+    ],
+    "reminders_sent": [
+      "10:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
