@@ -4,37 +4,21 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-04-09",
-    "question_slug": "xor-after-range-multiplication-queries-ii",
-    "question_title": "XOR After Range Multiplication Queries II",
-    "difficulty": "Hard",
+    "date": "2026-04-10",
+    "question_slug": "minimum-distance-between-three-equal-elements-i",
+    "question_title": "Minimum Distance Between Three Equal Elements I",
+    "difficulty": "Easy",
     "tags": [
       "Array",
-      "Divide and Conquer"
+      "Hash Table"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This problem fits a pattern called Square Root Decomposition. The trick is to treat queries with a large 'jump' (k) differently than queries with a small 'jump.'",
-      "Pick a threshold B (like 100 or 200). If k is greater than B, the number of elements to update is small enough to just loop through them directly without blowing the time limit.",
-      "For small k, notice that a query only affects indices that share the same remainder when divided by k. This means you can group queries by their 'k' value and their starting 'remainder.'",
-      "To handle small k efficiently, use a 'multiplicative difference array' for each remainder. You'll multiply by V at the start index and 'undo' the multiplication after the end index using a modular inverse.",
-      "The final algorithm: Process large-k queries directly. For small k, use prefix products on interleaved sub-sequences to find the total multiplier for every index. Finally, multiply each original number by its total multiplier and XOR them all together."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
