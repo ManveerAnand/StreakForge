@@ -22,16 +22,18 @@
       "The 'free' initial move is a bit tricky. Consider using a special state or a dummy coordinate to represent a finger that hasn't been placed yet, ensuring its first transition always results in a distance of zero.",
       "Try a recursive approach with memoization: at each character index, calculate the cost of moving the finger from the previous letter vs. moving the 'idle' finger from its last known position. The minimum of these two choices, plus the cost of the remaining word, gives you your answer."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "10:00",
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
