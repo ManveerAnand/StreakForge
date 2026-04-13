@@ -1,40 +1,23 @@
 {
   "version": 1,
-  "week_start": "2026-04-06",
+  "week_start": "2026-04-13",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-04-12",
-    "question_slug": "minimum-distance-to-type-a-word-using-two-fingers",
-    "question_title": "Minimum Distance to Type a Word Using Two Fingers",
-    "difficulty": "Hard",
+    "date": "2026-04-13",
+    "question_slug": "minimum-distance-to-the-target-element",
+    "question_title": "Minimum Distance to the Target Element",
+    "difficulty": "Easy",
     "tags": [
-      "String",
-      "Dynamic Programming"
+      "Array"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This problem asks for an optimal sequence of decisions where each choice affects the future. This is a classic setup for Dynamic Programming—we need to break the problem down and store the results of smaller sub-problems.",
-      "To calculate the cost of the next move, you need to know where both fingers are. However, notice a pattern: after typing any letter, one of your fingers is always at the position of the letter you just finished typing.",
-      "Since one finger is always at the 'previous' letter, you only need to keep track of two things: which letter in the word you are currently on, and the position of the 'other' finger that didn't just move.",
-      "The 'free' initial move is a bit tricky. Consider using a special state or a dummy coordinate to represent a finger that hasn't been placed yet, ensuring its first transition always results in a distance of zero.",
-      "Try a recursive approach with memoization: at each character index, calculate the cost of moving the finger from the previous letter vs. moving the 'idle' finger from its last known position. The minimum of these two choices, plus the cost of the remaining word, gives you your answer."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
