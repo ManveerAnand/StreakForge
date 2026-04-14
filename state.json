@@ -23,14 +23,16 @@
       "As you iterate through the number of robots a factory could take, keep a running sum of their distances to that factory. The total cost for a choice is that sum plus the best possible outcome for the remaining robots and the remaining factories.",
       "Use memoization to store the minimum distance for each (robot index, factory index) pair. If you reach the end of the robots, you've found a valid assignment (cost 0); if you run out of factories before robots, that path is impossible (cost infinity)."
     ],
-    "current_hint_level": 2,
+    "current_hint_level": 3,
     "hints_delivered": [
       1,
-      2
+      2,
+      3
     ],
     "reminders_sent": [
       "10:00",
-      "14:00"
+      "14:00",
+      "18:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
