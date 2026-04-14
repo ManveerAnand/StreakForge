@@ -4,24 +4,28 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-04-13",
-    "question_slug": "minimum-distance-to-the-target-element",
-    "question_title": "Minimum Distance to the Target Element",
-    "difficulty": "Easy",
+    "date": "2026-04-14",
+    "question_slug": "minimum-total-distance-traveled",
+    "question_title": "Minimum Total Distance Traveled",
+    "difficulty": "Hard",
     "tags": [
-      "Array"
+      "Array",
+      "Dynamic Programming",
+      "Sorting"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "Since the order of robots on the line matters, start by sorting both the robots and the factories by their positions. This ensures that when we make decisions, we can process them from one side of the map to the other without skipping around.",
+      "This problem can be broken down into a series of choices: for the current factory, how many robots should it repair? It could take zero, one, or any amount up to its limit.",
+      "Try to define a state based on which robot you are currently trying to place and which factory you are currently considering. If a factory takes a certain number of robots, those must be the next available robots in your sorted list to minimize crossing.",
+      "As you iterate through the number of robots a factory could take, keep a running sum of their distances to that factory. The total cost for a choice is that sum plus the best possible outcome for the remaining robots and the remaining factories.",
+      "Use memoization to store the minimum distance for each (robot index, factory index) pair. If you reach the end of the robots, you've found a valid assignment (cost 0); if you run out of factories before robots, that path is impossible (cost infinity)."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
