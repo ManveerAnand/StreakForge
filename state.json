@@ -1,17 +1,16 @@
 {
   "version": 1,
-  "week_start": "2026-04-13",
+  "week_start": "2026-04-20",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-04-19",
-    "question_slug": "maximum-distance-between-a-pair-of-values",
-    "question_title": "Maximum Distance Between a Pair of Values",
-    "difficulty": "Medium",
+    "date": "2026-04-20",
+    "question_slug": "two-furthest-houses-with-different-colors",
+    "question_title": "Two Furthest Houses With Different Colors",
+    "difficulty": "Easy",
     "tags": [
       "Array",
-      "Two Pointers",
-      "Binary Search"
+      "Greedy"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -19,12 +18,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
