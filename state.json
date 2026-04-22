@@ -4,14 +4,14 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-04-21",
-    "question_slug": "minimize-hamming-distance-after-swap-operations",
-    "question_title": "Minimize Hamming Distance After Swap Operations",
+    "date": "2026-04-22",
+    "question_slug": "words-within-two-edits-of-dictionary",
+    "question_title": "Words Within Two Edits of Dictionary",
     "difficulty": "Medium",
     "tags": [
       "Array",
-      "Depth-First Search",
-      "Union-Find"
+      "String",
+      "Trie"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -19,12 +19,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
