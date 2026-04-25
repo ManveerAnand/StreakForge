@@ -25,16 +25,18 @@
       "Be careful with the distance formula! While sorting by perimeter helps you pick points in order, the problem specifically asks for Manhattan distance: $|x_1 - x_2| + |y_1 - y_2|$. Use this formula when checking if two points are far enough apart.",
       "The 'wrap-around' means your $k$-th point must also be at least $D$ away from your $1$-st point. Since $k$ is small, you can try starting your greedy selection from each of the first few points to see if any valid cycle exists."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "10:00",
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
