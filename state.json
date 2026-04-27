@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "week_start": "2026-04-20",
+  "week_start": "2026-04-27",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-04-26",
-    "question_slug": "detect-cycles-in-2d-grid",
-    "question_title": "Detect Cycles in 2D Grid",
+    "date": "2026-04-27",
+    "question_slug": "check-if-there-is-a-valid-path-in-a-grid",
+    "question_title": "Check if There is a Valid Path in a Grid",
     "difficulty": "Medium",
     "tags": [
       "Array",
@@ -21,12 +21,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
