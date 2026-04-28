@@ -4,15 +4,14 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-04-27",
-    "question_slug": "check-if-there-is-a-valid-path-in-a-grid",
-    "question_title": "Check if There is a Valid Path in a Grid",
+    "date": "2026-04-28",
+    "question_slug": "minimum-operations-to-make-a-uni-value-grid",
+    "question_title": "Minimum Operations to Make a Uni-Value Grid",
     "difficulty": "Medium",
     "tags": [
       "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Union-Find",
+      "Math",
+      "Sorting",
       "Matrix"
     ],
     "is_solved": false,
@@ -21,11 +20,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
