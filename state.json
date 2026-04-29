@@ -4,27 +4,29 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-04-28",
-    "question_slug": "minimum-operations-to-make-a-uni-value-grid",
-    "question_title": "Minimum Operations to Make a Uni-Value Grid",
-    "difficulty": "Medium",
+    "date": "2026-04-29",
+    "question_slug": "maximum-score-from-grid-operations",
+    "question_title": "Maximum Score From Grid Operations",
+    "difficulty": "Hard",
     "tags": [
       "Array",
-      "Math",
-      "Sorting",
-      "Matrix"
+      "Dynamic Programming",
+      "Matrix",
+      "Prefix Sum"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This problem has a 'chain reaction' feel where each choice depends on the previous one. This is a classic setup for Dynamic Programming, where we process the grid column by column.",
+      "Since we need to calculate the sum of values in a column between two specific heights frequently, start by pre-calculating prefix sums for every column. This lets you find the score of any vertical segment in constant time.",
+      "The score for column 'j' depends on whether it is shorter or taller than its neighbors. You'll need to track the current column index and the height of the previous column in your DP state to know which 'walls' are visible.",
+      "There is a catch: a column might get points from its left neighbor being taller, OR its right neighbor being taller. To handle this, your DP state needs an extra flag to track if the height is currently 'increasing' or 'decreasing' as you move across.",
+      "Your final DP approach will look like this: for each column, try every possible height (0 to N). If the new height is greater than the previous, you gain points from the previous column's 'white' cells. If it's smaller, you gain points from the current column's 'white' cells that are next to the previous column's 'black' cells."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
