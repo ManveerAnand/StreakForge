@@ -24,9 +24,14 @@
       "There is a catch: a column might get points from its left neighbor being taller, OR its right neighbor being taller. To handle this, your DP state needs an extra flag to track if the height is currently 'increasing' or 'decreasing' as you move across.",
       "Your final DP approach will look like this: for each column, try every possible height (0 to N). If the new height is greater than the previous, you gain points from the previous column's 'white' cells. If it's smaller, you gain points from the current column's 'white' cells that are next to the previous column's 'black' cells."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 2,
+    "hints_delivered": [
+      1,
+      2
+    ],
+    "reminders_sent": [
+      "14:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
