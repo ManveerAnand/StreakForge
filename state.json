@@ -4,13 +4,13 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-05-02",
-    "question_slug": "rotated-digits",
-    "question_title": "Rotated Digits",
-    "difficulty": "Medium",
+    "date": "2026-05-03",
+    "question_slug": "rotate-string",
+    "question_title": "Rotate String",
+    "difficulty": "Easy",
     "tags": [
-      "Math",
-      "Dynamic Programming"
+      "String",
+      "String Matching"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -18,12 +18,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
