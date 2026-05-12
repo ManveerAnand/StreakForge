@@ -4,25 +4,28 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-05-11",
-    "question_slug": "separate-the-digits-in-an-array",
-    "question_title": "Separate the Digits in an Array",
-    "difficulty": "Easy",
+    "date": "2026-05-12",
+    "question_slug": "minimum-initial-energy-to-finish-tasks",
+    "question_title": "Minimum Initial Energy to Finish Tasks",
+    "difficulty": "Hard",
     "tags": [
       "Array",
-      "Simulation"
+      "Greedy",
+      "Sorting"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This is a Greedy problem where the secret lies in the sorting order. Since you can pick any task at any time, your first goal is to figure out the most 'efficient' sequence to preserve your energy.",
+      "Look at the relationship between the 'minimum' energy and the 'actual' energy for each task. Specifically, think about the 'gap' or 'buffer' (minimum minus actual) that stays in your tank after a task is finished.",
+      "If you do tasks with a large 'buffer' early, you use your high initial energy to satisfy those strict starting requirements before your tank gets too low from the actual energy costs.",
+      "Try sorting the tasks by that buffer (minimum - actual) in descending order. This strategy prioritizes tasks that require the most 'extra' energy relative to what they actually consume.",
+      "Once sorted, simulate the process: start with zero energy and iterate through the tasks. If your current energy is less than a task's minimum, 'add' just enough to your starting total to meet that requirement, then subtract the actual cost and move to the next task."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
