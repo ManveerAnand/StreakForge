@@ -23,13 +23,15 @@
       "Try sorting the tasks by that buffer (minimum - actual) in descending order. This strategy prioritizes tasks that require the most 'extra' energy relative to what they actually consume.",
       "Once sorted, simulate the process: start with zero energy and iterate through the tasks. If your current energy is less than a task's minimum, 'add' just enough to your starting total to meet that requirement, then subtract the actual cost and move to the next task."
     ],
-    "current_hint_level": 2,
+    "current_hint_level": 3,
     "hints_delivered": [
       1,
-      2
+      2,
+      3
     ],
     "reminders_sent": [
-      "14:00"
+      "14:00",
+      "18:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
