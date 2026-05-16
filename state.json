@@ -22,13 +22,15 @@
       "The 'Hard' part is when the middle and right elements are exactly the same. When this happens, you can't be sure which side to discard, but you know for a fact that the rightmost element is redundant because the middle element has the same value.",
       "To handle duplicates, simply shrink your search window by moving the right boundary inward by one step whenever the middle and right elements are equal. This preserves the minimum while slowly clearing the ambiguity until you can resume your jump-searches."
     ],
-    "current_hint_level": 2,
+    "current_hint_level": 3,
     "hints_delivered": [
       1,
-      2
+      2,
+      3
     ],
     "reminders_sent": [
-      "14:00"
+      "14:00",
+      "18:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
