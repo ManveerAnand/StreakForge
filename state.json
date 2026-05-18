@@ -23,15 +23,17 @@
       "Here is the trick: once you have processed all teleport destinations for a specific value (like '100'), you will never need to 'teleport' from that value ever again. If you don't find a way to skip those redundant checks, your search will be too slow.",
       "Start BFS at index 0, using a queue to track your current index and step count. For each index, explore its neighbors (i+1, i-1) and all teleport indices from your map, then immediately clear that entry in the map so you don't re-process those same jumps from a different starting point."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
