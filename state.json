@@ -23,9 +23,14 @@
       "To avoid doing the same work twice, you'll need a way to store the 'best path' for each index once it's calculated. A simple array can act as a memory bank for these values.",
       "The core logic is: the max jumps from index 'i' is 1 plus the maximum of all valid jumps you can make from there. If you calculate this for every index—either by height order or using recursion with a cache—you'll find the global maximum."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 2,
+    "hints_delivered": [
+      1,
+      2
+    ],
+    "reminders_sent": [
+      "14:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
