@@ -1,40 +1,26 @@
 {
   "version": 1,
-  "week_start": "2026-05-18",
+  "week_start": "2026-05-25",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-05-24",
-    "question_slug": "jump-game-v",
-    "question_title": "Jump Game V",
-    "difficulty": "Hard",
+    "date": "2026-05-25",
+    "question_slug": "jump-game-vii",
+    "question_title": "Jump Game VII",
+    "difficulty": "Medium",
     "tags": [
-      "Array",
+      "String",
       "Dynamic Programming",
-      "Sorting"
+      "Sliding Window",
+      "Prefix Sum"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This is a 'longest path' problem in disguise. Since you can only jump from higher towers to lower ones, you can never return to a tower you've already visited, meaning there are no loops to worry about.",
-      "Think about the order of operations. Since a tall tower's result depends on the results of the shorter towers it can reach, consider how sorting the towers by height might simplify your work.",
-      "For any index, you only need to check its neighbors within distance 'd'. The moment you hit a tower that is equal to or taller than your current one, you can stop looking in that direction because you can't jump over it.",
-      "To avoid doing the same work twice, you'll need a way to store the 'best path' for each index once it's calculated. A simple array can act as a memory bank for these values.",
-      "The core logic is: the max jumps from index 'i' is 1 plus the maximum of all valid jumps you can make from there. If you calculate this for every index—either by height order or using recursion with a cache—you'll find the global maximum."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
