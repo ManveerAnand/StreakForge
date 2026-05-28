@@ -23,13 +23,15 @@
       "As you insert a word into the Trie, compare its length with the 'best' word currently stored at each node. Only update that node's index if the new word is shorter (or same length but earlier index).",
       "To finish: initialize the root with the overall best word for a zero-match case. For each query, reverse it, walk down the Trie as deep as possible, and the index stored at your final node is your answer."
     ],
-    "current_hint_level": 2,
+    "current_hint_level": 3,
     "hints_delivered": [
       1,
-      2
+      2,
+      3
     ],
     "reminders_sent": [
-      "14:00"
+      "14:00",
+      "18:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
