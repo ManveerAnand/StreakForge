@@ -4,37 +4,21 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-05-28",
-    "question_slug": "longest-common-suffix-queries",
-    "question_title": "Longest Common Suffix Queries",
-    "difficulty": "Hard",
+    "date": "2026-05-29",
+    "question_slug": "minimum-element-after-replacement-with-digit-sum",
+    "question_title": "Minimum Element After Replacement With Digit Sum",
+    "difficulty": "Easy",
     "tags": [
       "Array",
-      "String",
-      "Trie"
+      "Math"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This is a search problem where we care about the ends of words. If we flip all the strings around, we're suddenly looking for the longest common prefix—a classic pattern for a specific tree-based structure.",
-      "Think about using a Trie to store the reversed words from the container. This allows you to follow the characters of your query one by one until you can't go any further.",
-      "The tricky part is the tie-breaking. Instead of just marking the 'end' of a word in the Trie, what if every single node along the path stored the 'best' index encountered so far?",
-      "As you insert a word into the Trie, compare its length with the 'best' word currently stored at each node. Only update that node's index if the new word is shorter (or same length but earlier index).",
-      "To finish: initialize the root with the overall best word for a zero-match case. For each query, reverse it, walk down the Trie as deep as possible, and the index stored at your final node is your answer."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
