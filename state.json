@@ -24,13 +24,15 @@
       "A Segment Tree or Binary Indexed Tree can store the maximum gap lengths. Use a sorted set or a balanced BST to quickly find the immediate neighbors of a new obstacle so you know which gaps are being created or destroyed.",
       "Map the coordinate system to your tree. When an obstacle is added at p, update the tree at position p with the distance to the obstacle immediately to its left. To query x, find the max value in the tree up to x and compare it (and the final tail segment) to the required size."
     ],
-    "current_hint_level": 2,
+    "current_hint_level": 3,
     "hints_delivered": [
       1,
-      2
+      2,
+      3
     ],
     "reminders_sent": [
-      "14:00"
+      "14:00",
+      "18:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
