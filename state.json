@@ -4,38 +4,22 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-05-30",
-    "question_slug": "block-placement-queries",
-    "question_title": "Block Placement Queries",
-    "difficulty": "Hard",
+    "date": "2026-05-31",
+    "question_slug": "destroying-asteroids",
+    "question_title": "Destroying Asteroids",
+    "difficulty": "Medium",
     "tags": [
       "Array",
-      "Binary Search",
-      "Binary Indexed Tree",
-      "Segment Tree"
+      "Greedy",
+      "Sorting"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This is a range query problem in disguise. You need to efficiently update a value (adding an obstacle) and query a maximum (the largest available gap) over a specific distance.",
-      "Think about what changes when you add an obstacle at point X. You are essentially splitting one large gap into two smaller gaps. You need a way to track these 'gap lengths' across the number line.",
-      "To answer the rug query for range [0, x], you need the maximum of two things: the largest gap between any two obstacles before x, and the distance between the very last obstacle before x and x itself.",
-      "A Segment Tree or Binary Indexed Tree can store the maximum gap lengths. Use a sorted set or a balanced BST to quickly find the immediate neighbors of a new obstacle so you know which gaps are being created or destroyed.",
-      "Map the coordinate system to your tree. When an obstacle is added at p, update the tree at position p with the distance to the obstacle immediately to its left. To query x, find the max value in the tree up to x and compare it (and the final tail segment) to the required size."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
