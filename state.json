@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "week_start": "2026-05-25",
+  "week_start": "2026-06-01",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-05-31",
-    "question_slug": "destroying-asteroids",
-    "question_title": "Destroying Asteroids",
-    "difficulty": "Medium",
+    "date": "2026-06-01",
+    "question_slug": "minimum-cost-of-buying-candies-with-discount",
+    "question_title": "Minimum Cost of Buying Candies With Discount",
+    "difficulty": "Easy",
     "tags": [
       "Array",
       "Greedy",
@@ -19,11 +19,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
