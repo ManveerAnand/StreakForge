@@ -5,12 +5,18 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-06-02",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "earliest-finish-time-for-land-and-water-rides-i",
+    "question_title": "Earliest Finish Time for Land and Water Rides I",
+    "difficulty": "Easy",
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Binary Search",
+      "Greedy",
+      "Sorting"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
