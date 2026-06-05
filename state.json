@@ -22,13 +22,15 @@
       "You'll need to track a few things in your DP state: the current digit position, the last two digits used, whether you're still restricted by the upper bound, and whether you've started placing non-zero digits yet.",
       "The secret is to return two values from your DP: the total count of valid numbers that can be formed from this point, and the total sum of waviness those numbers will contribute. This lets you carry the waviness forward efficiently."
     ],
-    "current_hint_level": 2,
+    "current_hint_level": 3,
     "hints_delivered": [
       1,
-      2
+      2,
+      3
     ],
     "reminders_sent": [
-      "14:00"
+      "14:00",
+      "18:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
