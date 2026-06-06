@@ -4,36 +4,21 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-06-05",
-    "question_slug": "total-waviness-of-numbers-in-range-ii",
-    "question_title": "Total Waviness of Numbers in Range II",
-    "difficulty": "Hard",
+    "date": "2026-06-06",
+    "question_slug": "left-and-right-sum-differences",
+    "question_title": "Left and Right Sum Differences",
+    "difficulty": "Easy",
     "tags": [
-      "Math",
-      "Dynamic Programming"
+      "Array",
+      "Prefix Sum"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This problem asks us to count properties of numbers across a massive range, which is a classic sign of Digit Dynamic Programming. We want to build the numbers digit by digit from left to right.",
-      "Instead of calculating the range directly, solve for a single limit. Create a function that finds the total waviness from 0 to X, then the answer for [num1, num2] is simply the result for num2 minus the result for num1-1.",
-      "To identify a peak or valley, you need to compare a digit with its neighbors. As you build the number, your state needs to 'remember' the previous digit and the digit before that to decide if the middle one qualifies.",
-      "You'll need to track a few things in your DP state: the current digit position, the last two digits used, whether you're still restricted by the upper bound, and whether you've started placing non-zero digits yet.",
-      "The secret is to return two values from your DP: the total count of valid numbers that can be formed from this point, and the total sum of waviness those numbers will contribute. This lets you carry the waviness forward efficiently."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
