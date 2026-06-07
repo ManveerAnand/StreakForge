@@ -4,13 +4,15 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-06-06",
-    "question_slug": "left-and-right-sum-differences",
-    "question_title": "Left and Right Sum Differences",
-    "difficulty": "Easy",
+    "date": "2026-06-07",
+    "question_slug": "create-binary-tree-from-descriptions",
+    "question_title": "Create Binary Tree From Descriptions",
+    "difficulty": "Medium",
     "tags": [
       "Array",
-      "Prefix Sum"
+      "Hash Table",
+      "Tree",
+      "Binary Tree"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -18,11 +20,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
