@@ -4,25 +4,29 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-06-09",
-    "question_slug": "maximum-total-subarray-value-i",
-    "question_title": "Maximum Total Subarray Value I",
-    "difficulty": "Medium",
+    "date": "2026-06-10",
+    "question_slug": "maximum-total-subarray-value-ii",
+    "question_title": "Maximum Total Subarray Value II",
+    "difficulty": "Hard",
     "tags": [
       "Array",
-      "Greedy"
+      "Greedy",
+      "Segment Tree",
+      "Heap (Priority Queue)"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This is a 'Top K' problem. Usually, that means we need a Greedy approach, using a Heap or sorting to pick the best items. The trick is finding a way to group the $O(n^2)$ possible subarrays into a smaller number of manageable 'blocks'.",
+      "Consider a fixed start-point $l$. As you increase the end-point $r$, the maximum and minimum values of the subarray $nums[l..r]$ only change at specific indices. Think about how many times these values actually change across the whole array.",
+      "Use two Monotonic Stacks (one for maximums, one for minimums) as you iterate through the array. These stacks help you identify the exact ranges where an element remains the maximum or minimum for a set of subarrays.",
+      "As you move from left to right, the stacks help you identify 'rectangles' of subarrays $(l, r)$ that all share the same maximum and the same minimum. Remarkably, there are only $O(n)$ such distinct rectangles in total, not $O(n^2)$!",
+      "Calculate the value $(\\text{max} - \\text{min})$ for each of these $O(n)$ rectangles and count how many subarrays each rectangle contains. Sort these blocks by their value and greedily pick the $k$ subarrays from the highest-value blocks first."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
