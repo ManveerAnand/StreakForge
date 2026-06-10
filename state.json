@@ -24,9 +24,14 @@
       "As you move from left to right, the stacks help you identify 'rectangles' of subarrays $(l, r)$ that all share the same maximum and the same minimum. Remarkably, there are only $O(n)$ such distinct rectangles in total, not $O(n^2)$!",
       "Calculate the value $(\\text{max} - \\text{min})$ for each of these $O(n)$ rectangles and count how many subarrays each rectangle contains. Sort these blocks by their value and greedily pick the $k$ subarrays from the highest-value blocks first."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 2,
+    "hints_delivered": [
+      1,
+      2
+    ],
+    "reminders_sent": [
+      "14:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
