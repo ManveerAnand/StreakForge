@@ -26,15 +26,17 @@
       "To handle the high volume of queries, you'll need to find the distance L between any two nodes u and v in logarithmic time. Using the Lowest Common Ancestor (LCA) and node depths is the standard way to find path lengths efficiently in a tree.",
       "The final strategy: Precompute node depths and LCA using binary lifting. For each query, calculate the path length L; if L is 0, the answer is 0, otherwise use modular exponentiation to calculate 2 to the power of (L-1) modulo 10^9 + 7."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
