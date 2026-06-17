@@ -22,15 +22,17 @@
       "If the current operation is a '%', the string was reversed. To find what character is now at index k, you need to calculate which index it occupied before the flip by subtracting k from the total length at that moment.",
       "Continue this backward traversal, adjusting k as you go. When you encounter a lowercase letter and your current k matches the current length minus one, you've found the character! If you finish and k is still out of bounds, return the dot."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
