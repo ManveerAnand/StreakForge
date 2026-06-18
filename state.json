@@ -4,36 +4,20 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-06-17",
-    "question_slug": "process-string-with-special-operations-ii",
-    "question_title": "Process String with Special Operations II",
-    "difficulty": "Hard",
+    "date": "2026-06-18",
+    "question_slug": "angle-between-hands-of-a-clock",
+    "question_title": "Angle Between Hands of a Clock",
+    "difficulty": "Medium",
     "tags": [
-      "String",
-      "Simulation"
+      "Math"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This is a 'Reverse Simulation' problem. Since the final string is too large to store, you need to track how the string's length grows during a forward pass and then trace the index k backward to the start.",
-      "Perform a forward pass through the string s to store the length of the 'result' after every single operation. If the length ever exceeds k, you can actually stop there, as subsequent operations won't affect the character at index k unless they reverse the string.",
-      "Now, start from the end of your operations and work backward. If the current operation is a '#', the string was doubled; you can use the modulo operator to map your current index k back to its original position in the first half.",
-      "If the current operation is a '%', the string was reversed. To find what character is now at index k, you need to calculate which index it occupied before the flip by subtracting k from the total length at that moment.",
-      "Continue this backward traversal, adjusting k as you go. When you encounter a lowercase letter and your current k matches the current length minus one, you've found the character! If you finish and k is still out of bounds, return the dot."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
