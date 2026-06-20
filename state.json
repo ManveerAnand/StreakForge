@@ -23,15 +23,17 @@
       "Don't forget the edges! You should treat the first building (height 0 at index 1) and the last building (index $n$) as special restrictions to ensure your logic covers the whole range.",
       "Once you have the final height limits for all restricted points, the maximum height between two points $(d1, h1)$ and $(d2, h2)$ can be found using a simple formula involving the distance between them and their height difference."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
