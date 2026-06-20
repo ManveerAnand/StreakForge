@@ -4,25 +4,28 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-06-19",
-    "question_slug": "find-the-highest-altitude",
-    "question_title": "Find the Highest Altitude",
-    "difficulty": "Easy",
+    "date": "2026-06-20",
+    "question_slug": "maximum-building-height",
+    "question_title": "Maximum Building Height",
+    "difficulty": "Hard",
     "tags": [
       "Array",
-      "Prefix Sum"
+      "Math",
+      "Sorting"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "Since $n$ is a billion but there are only a few restrictions, don't focus on every building. Focus on the restricted buildings and the empty spaces between them.",
+      "A restriction at one building affects its neighbors. If building 10 is capped at 2, building 9 can't be taller than 3, and building 11 can't be taller than 3 either. This 'pressure' spreads in both directions.",
+      "To find the 'true' height limit of a building, you must reconcile its own cap with the caps of every other restricted building. Try a two-pass approach: one pass to let constraints flow right, and another to let them flow left.",
+      "Don't forget the edges! You should treat the first building (height 0 at index 1) and the last building (index $n$) as special restrictions to ensure your logic covers the whole range.",
+      "Once you have the final height limits for all restricted points, the maximum height between two points $(d1, h1)$ and $(d2, h2)$ can be found using a simple formula involving the distance between them and their height difference."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
