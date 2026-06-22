@@ -1,18 +1,17 @@
 {
   "version": 1,
-  "week_start": "2026-06-15",
+  "week_start": "2026-06-22",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-06-21",
-    "question_slug": "maximum-ice-cream-bars",
-    "question_title": "Maximum Ice Cream Bars",
-    "difficulty": "Medium",
+    "date": "2026-06-22",
+    "question_slug": "maximum-number-of-balloons",
+    "question_title": "Maximum Number of Balloons",
+    "difficulty": "Easy",
     "tags": [
-      "Array",
-      "Greedy",
-      "Sorting",
-      "Counting Sort"
+      "Hash Table",
+      "String",
+      "Counting"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -20,11 +19,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
