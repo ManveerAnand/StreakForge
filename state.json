@@ -22,13 +22,15 @@
       "With a range of 2,000 values, a basic transition would involve a loop to sum up all possible previous values, leading to an O(N * Range^2) complexity. To pass the time limit, you'll need a way to calculate the sum of a range of DP states in constant time.",
       "Think about using Prefix Sums: for every step in your DP, maintain a running total of the ways to reach that step. This allows you to calculate the total ways to 'move up' or 'move down' to a new value by simply subtracting two values from your sum array."
     ],
-    "current_hint_level": 2,
+    "current_hint_level": 3,
     "hints_delivered": [
       1,
-      2
+      2,
+      3
     ],
     "reminders_sent": [
-      "14:00"
+      "14:00",
+      "18:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
