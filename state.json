@@ -5,14 +5,23 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-06-23",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "number-of-zigzag-arrays-i",
+    "question_title": "Number of ZigZag Arrays I",
+    "difficulty": "Hard",
+    "tags": [
+      "Dynamic Programming",
+      "Prefix Sum"
+    ],
     "is_solved": false,
-    "morning_sent": false,
-    "hints_generated": false,
-    "hints_cache": [],
+    "morning_sent": true,
+    "hints_generated": true,
+    "hints_cache": [
+      "This problem asks us to count combinations based on a sequence of choices, where each choice depends on the previous one. This is a classic setup for Dynamic Programming, where we build the solution for length 'n' using results from length 'n-1'.",
+      "To know if the next move is valid, your 'state' needs to track three things: how many numbers you've placed so far, the value of the last number placed, and whether you reached that number by increasing or decreasing.",
+      "If you just moved 'up' to reach value X, the next value must be strictly 'down' (smaller than X). If you moved 'down' to reach X, the next value must be strictly 'up' (larger than X).",
+      "With a range of 2,000 values, a basic transition would involve a loop to sum up all possible previous values, leading to an O(N * Range^2) complexity. To pass the time limit, you'll need a way to calculate the sum of a range of DP states in constant time.",
+      "Think about using Prefix Sums: for every step in your DP, maintain a running total of the ways to reach that step. This allows you to calculate the total ways to 'move up' or 'move down' to a new value by simply subtracting two values from your sum array."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
     "reminders_sent": [],
