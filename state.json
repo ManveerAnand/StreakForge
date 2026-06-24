@@ -22,9 +22,14 @@
       "Construct a transition matrix where an entry is 1 if moving from state A to state B is allowed by the zigzag rules, and 0 otherwise. For example, from (Value 5, Up), you can move to (Value 4, Down), (Value 3, Down), etc.",
       "The total number of valid arrays is the sum of all paths of length $n-1$ in this state graph. Use binary exponentiation to raise your transition matrix to the power of $n-1$ in logarithmic time."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 2,
+    "hints_delivered": [
+      1,
+      2
+    ],
+    "reminders_sent": [
+      "14:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
