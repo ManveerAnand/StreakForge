@@ -26,15 +26,17 @@
       "Now the problem becomes: how many pairs of indices (i, j) exist such that j > i and PrefixSum[j] > PrefixSum[i]? This is very similar to the famous 'Counting Inversions' problem.",
       "To solve this efficiently, you can use a Fenwick Tree (Binary Indexed Tree) or a modified Merge Sort. You'll iterate through your prefix sums and, for each one, count how many smaller prefix sums you've seen before it."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
