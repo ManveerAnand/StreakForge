@@ -4,30 +4,31 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-06-25",
-    "question_slug": "count-subarrays-with-majority-element-i",
-    "question_title": "Count Subarrays With Majority Element I",
-    "difficulty": "Medium",
+    "date": "2026-06-26",
+    "question_slug": "count-subarrays-with-majority-element-ii",
+    "question_title": "Count Subarrays With Majority Element II",
+    "difficulty": "Hard",
     "tags": [
       "Array",
       "Hash Table",
       "Divide and Conquer",
       "Segment Tree",
       "Merge Sort",
-      "Counting",
       "Prefix Sum"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This problem is a classic 'Prefix Sum' challenge in disguise. Think about how you can transform the array into simple values that represent whether a number is your target or not.",
+      "Try assigning +1 to every instance of the target and -1 to everything else. A subarray is valid only if the sum of these assigned values is strictly greater than zero.",
+      "If you calculate the running total (prefix sum) of these +1s and -1s, a subarray from index i to j is valid if the running total at j is greater than the running total at i-1.",
+      "Now the problem becomes: how many pairs of indices (i, j) exist such that j > i and PrefixSum[j] > PrefixSum[i]? This is very similar to the famous 'Counting Inversions' problem.",
+      "To solve this efficiently, you can use a Fenwick Tree (Binary Indexed Tree) or a modified Merge Sort. You'll iterate through your prefix sums and, for each one, count how many smaller prefix sums you've seen before it."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
