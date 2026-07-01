@@ -4,14 +4,17 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-06-30",
-    "question_slug": "number-of-substrings-containing-all-three-characters",
-    "question_title": "Number of Substrings Containing All Three Characters",
+    "date": "2026-07-01",
+    "question_slug": "find-the-safest-path-in-a-grid",
+    "question_title": "Find the Safest Path in a Grid",
     "difficulty": "Medium",
     "tags": [
-      "Hash Table",
-      "String",
-      "Sliding Window"
+      "Array",
+      "Binary Search",
+      "Breadth-First Search",
+      "Union-Find",
+      "Heap (Priority Queue)",
+      "Matrix"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -19,11 +22,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
