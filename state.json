@@ -27,9 +27,14 @@
       "Since the graph is a Directed Acyclic Graph (DAG), you don't need complex shortest-path algorithms like Dijkstra. You can find the cheapest path using Dynamic Programming or a Topological Sort, which is much faster.",
       "Collect all unique edge costs and sort them. Binary search through these values; for each value, run a DP to find the minimum total cost to reach the destination using only edges $\\ge$ your current value. If the total cost is $\\le k$, you've found a possible score and can try for an even higher one."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 2,
+    "hints_delivered": [
+      1,
+      2
+    ],
+    "reminders_sent": [
+      "14:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
