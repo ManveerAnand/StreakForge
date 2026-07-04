@@ -4,41 +4,23 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-07-03",
-    "question_slug": "network-recovery-pathways",
-    "question_title": "Network Recovery Pathways",
-    "difficulty": "Hard",
+    "date": "2026-07-04",
+    "question_slug": "minimum-score-of-a-path-between-two-cities",
+    "question_title": "Minimum Score of a Path Between Two Cities",
+    "difficulty": "Medium",
     "tags": [
-      "Array",
-      "Binary Search",
-      "Dynamic Programming",
-      "Graph Theory",
-      "Topological Sort",
-      "Heap (Priority Queue)",
-      "Shortest Path"
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union-Find",
+      "Graph Theory"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This problem asks you to 'maximize the minimum' value. When you see that phrasing, it's a huge clue that you can binary search on the answer itself—the minimum edge cost.",
-      "If you pick a potential 'minimum cost' value, you can ignore any edges smaller than that. Now the problem becomes simpler: is there *any* valid path left that stays under the total budget $k$?",
-      "To check if a path exists within budget $k$, you need to find the absolute cheapest way to get from 0 to $n-1$ using only the allowed edges and online nodes. If that cheapest path is still over $k$, your chosen minimum cost is too high.",
-      "Since the graph is a Directed Acyclic Graph (DAG), you don't need complex shortest-path algorithms like Dijkstra. You can find the cheapest path using Dynamic Programming or a Topological Sort, which is much faster.",
-      "Collect all unique edge costs and sort them. Binary search through these values; for each value, run a DP to find the minimum total cost to reach the destination using only edges $\\ge$ your current value. If the total cost is $\\le k$, you've found a possible score and can try for an even higher one."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
