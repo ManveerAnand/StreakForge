@@ -23,9 +23,14 @@
       "To track the paths, look at those same three neighbors. If only one neighbor gives the maximum score, you inherit its path count; if two or three neighbors tie for the maximum score, you must sum their path counts together.",
       "Initialize a grid where each cell stores a pair: [max_score, path_count]. Start at the 'S' position with score 0 and 1 path, then fill the grid row by row or column by column, applying the modulo to the path counts at every addition to prevent overflow."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 2,
+    "hints_delivered": [
+      1,
+      2
+    ],
+    "reminders_sent": [
+      "14:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
