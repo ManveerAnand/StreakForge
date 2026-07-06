@@ -1,40 +1,24 @@
 {
   "version": 1,
-  "week_start": "2026-06-29",
+  "week_start": "2026-07-06",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-07-05",
-    "question_slug": "number-of-paths-with-max-score",
-    "question_title": "Number of Paths with Max Score",
-    "difficulty": "Hard",
+    "date": "2026-07-06",
+    "question_slug": "remove-covered-intervals",
+    "question_title": "Remove Covered Intervals",
+    "difficulty": "Medium",
     "tags": [
       "Array",
-      "Dynamic Programming",
-      "Matrix"
+      "Sorting"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This problem is about building a solution for the whole board by using solutions from smaller parts of the board. Since you're navigating a grid to find an optimal sum, this fits the Dynamic Programming pattern perfectly.",
-      "Try working backwards or forwards. If you know the best score and path count for the three squares below and to the right of your current position, you can determine the best possible outcome for your current square.",
-      "For any square, your max score is the maximum of its three neighbors (bottom, right, and bottom-right) plus its own value. However, you can only inherit a score from a neighbor if that neighbor isn't an obstacle and has at least one valid path reaching it.",
-      "To track the paths, look at those same three neighbors. If only one neighbor gives the maximum score, you inherit its path count; if two or three neighbors tie for the maximum score, you must sum their path counts together.",
-      "Initialize a grid where each cell stores a pair: [max_score, path_count]. Start at the 'S' position with score 0 and 1 path, then fill the grid row by row or column by column, applying the modulo to the path counts at every addition to prevent overflow."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
