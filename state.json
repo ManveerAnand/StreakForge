@@ -4,12 +4,14 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-07-07",
-    "question_slug": "concatenate-non-zero-digits-and-multiply-by-sum-i",
-    "question_title": "Concatenate Non-Zero Digits and Multiply by Sum I",
-    "difficulty": "Easy",
+    "date": "2026-07-08",
+    "question_slug": "concatenate-non-zero-digits-and-multiply-by-sum-ii",
+    "question_title": "Concatenate Non-Zero Digits and Multiply by Sum II",
+    "difficulty": "Medium",
     "tags": [
-      "Math"
+      "Math",
+      "String",
+      "Prefix Sum"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -17,11 +19,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
