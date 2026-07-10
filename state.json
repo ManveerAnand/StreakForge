@@ -4,28 +4,33 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-07-09",
-    "question_slug": "path-existence-queries-in-a-graph-i",
-    "question_title": "Path Existence Queries in a Graph I",
-    "difficulty": "Medium",
+    "date": "2026-07-10",
+    "question_slug": "path-existence-queries-in-a-graph-ii",
+    "question_title": "Path Existence Queries in a Graph II",
+    "difficulty": "Hard",
     "tags": [
       "Array",
-      "Hash Table",
+      "Two Pointers",
       "Binary Search",
-      "Union-Find",
-      "Graph Theory"
+      "Dynamic Programming",
+      "Greedy",
+      "Bit Manipulation",
+      "Graph Theory",
+      "Sorting"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This is a shortest path problem in disguise. Since the nodes are just values on a number line, the 'best' move is always greedy: jump to the furthest possible value that is still within `maxDiff` of your current position.",
+      "Start by sorting the unique values in the array. If any two consecutive values in your sorted list have a gap larger than `maxDiff`, you've found a 'dead end'—no path can ever cross that gap.",
+      "For a single query, you could use binary search to find the furthest reachable value and jump there repeatedly. However, doing this one jump at a time for every query will lead to a Time Limit Exceeded error.",
+      "To speed things up, consider how you can combine multiple jumps. If you know where you'd land after 1 jump, 2 jumps, and 4 jumps, you could potentially 'teleport' across the graph much faster than walking.",
+      "Use Binary Lifting (Doubling). Precompute a table where each entry tells you which index you'd reach after 2^k greedy jumps. For each query, use this table to jump as far as possible without overshooting your target, counting the steps as you go."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
