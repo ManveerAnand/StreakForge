@@ -28,15 +28,17 @@
       "To speed things up, consider how you can combine multiple jumps. If you know where you'd land after 1 jump, 2 jumps, and 4 jumps, you could potentially 'teleport' across the graph much faster than walking.",
       "Use Binary Lifting (Doubling). Precompute a table where each entry tells you which index you'd reach after 2^k greedy jumps. For each query, use this table to jump as far as possible without overshooting your target, counting the steps as you go."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
