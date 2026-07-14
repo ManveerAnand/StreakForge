@@ -24,9 +24,14 @@
       "You'll need to handle the 'empty' state carefully, perhaps by using a special value like 0 to represent a team with no numbers yet. Remember, the final answer only counts pairs where both teams are non-empty and their GCDs match.",
       "Build a 3D table where you store the number of ways to reach a specific pair of GCDs using the first 'i' numbers. For each new number, update your table by branching into three possibilities: updating Team A's GCD, updating Team B's GCD, or ignoring the number entirely."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 2,
+    "hints_delivered": [
+      1,
+      2
+    ],
+    "reminders_sent": [
+      "14:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
