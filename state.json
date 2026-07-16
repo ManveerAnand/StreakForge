@@ -4,12 +4,16 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-07-15",
-    "question_slug": "gcd-of-odd-and-even-sums",
-    "question_title": "GCD of Odd and Even Sums",
-    "difficulty": "Easy",
+    "date": "2026-07-16",
+    "question_slug": "sum-of-gcd-of-formed-pairs",
+    "question_title": "Sum of GCD of Formed Pairs",
+    "difficulty": "Medium",
     "tags": [
+      "Array",
       "Math",
+      "Two Pointers",
+      "Sorting",
+      "Simulation",
       "Number Theory"
     ],
     "is_solved": false,
@@ -18,11 +22,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
