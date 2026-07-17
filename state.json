@@ -28,15 +28,17 @@
       "Try processing the possible GCD values in reverse order, from the maximum value down to 1. This way, when you calculate the count for 'x', you've already computed the counts for '2x', '3x', and so on, which you need to subtract.",
       "Once you have the total count of pairs for every possible GCD, use a prefix sum to determine the cumulative number of pairs. For each query, a binary search on this prefix sum array will tell you exactly which GCD value that index belongs to."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
