@@ -24,15 +24,17 @@
       "To handle the $10^5$ queries efficiently, you need a way to find the maximum gain in a range. A Segment Tree or a Sparse Table could store the lengths of these 0-valleys, but you'll need to handle the 'clipping' at the query boundaries separately from the 'full' valleys in the middle.",
       "Final strategy: Pre-calculate the total 0s between every two 1-blocks. For each query, use a Segment Tree to find the best 'inner' tradeable 1-block (where valleys are fully inside [L, R]) and manually check the 1-blocks near the boundaries L and R where clipping occurs."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
