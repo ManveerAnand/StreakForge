@@ -25,9 +25,14 @@
       "Because k is relatively small (10^6), you can avoid overflow from giant factorials. If your permutation count ever exceeds k, you can simply cap it at k + 1 because you already know you've found the right 'branch' to explore.",
       "Maintain a frequency map of the characters available for the first half. For each index, iterate 'a' through 'z', calculate the permutations of the remaining pool, and if k is larger than that count, subtract the count from k and try the next character; otherwise, place that character and repeat for the next index."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 2,
+    "hints_delivered": [
+      1,
+      2
+    ],
+    "reminders_sent": [
+      "14:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
