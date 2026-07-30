@@ -4,39 +4,22 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-07-29",
-    "question_slug": "smallest-palindromic-rearrangement-ii",
-    "question_title": "Smallest Palindromic Rearrangement II",
-    "difficulty": "Hard",
+    "date": "2026-07-30",
+    "question_slug": "minimum-number-of-pushes-to-type-word-i",
+    "question_title": "Minimum Number of Pushes to Type Word I",
+    "difficulty": "Easy",
     "tags": [
-      "Hash Table",
       "Math",
       "String",
-      "Combinatorics",
-      "Counting"
+      "Greedy"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This is a counting and combinatorics problem in disguise. Since every palindrome is perfectly symmetrical, you only need to figure out the first half of the string; the second half is automatically determined as a mirror image.",
-      "Try building the first half of the string one character at a time, from left to right. At each position, you need to decide which letter ('a', 'b', 'c'...) belongs there to reach the k-th lexicographical position.",
-      "For any character you consider placing at the current index, calculate how many ways the remaining characters can be arranged using the multinomial coefficient formula. This tells you if the k-th permutation falls within the group starting with that character.",
-      "Because k is relatively small (10^6), you can avoid overflow from giant factorials. If your permutation count ever exceeds k, you can simply cap it at k + 1 because you already know you've found the right 'branch' to explore.",
-      "Maintain a frequency map of the characters available for the first half. For each index, iterate 'a' through 'z', calculate the permutations of the remaining pool, and if k is larger than that count, subtract the count from k and try the next character; otherwise, place that character and repeat for the next index."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
