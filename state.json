@@ -4,16 +4,16 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-07-31",
-    "question_slug": "minimum-number-of-pushes-to-type-word-ii",
-    "question_title": "Minimum Number of Pushes to Type Word II",
+    "date": "2026-08-01",
+    "question_slug": "predict-the-winner",
+    "question_title": "Predict the Winner",
     "difficulty": "Medium",
     "tags": [
-      "Hash Table",
-      "String",
-      "Greedy",
-      "Sorting",
-      "Counting"
+      "Array",
+      "Math",
+      "Dynamic Programming",
+      "Recursion",
+      "Game Theory"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -21,11 +21,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
