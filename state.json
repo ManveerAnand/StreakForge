@@ -24,15 +24,17 @@
       "Because the current decision depends on future decisions, try working backward from the end of the array to the beginning. You only need to keep track of the best results from the three positions immediately following your current index.",
       "Build a list from right to left where each entry represents the maximum lead a player can achieve starting from that stone. For each index, calculate the three possible outcomes (taking 1, 2, or 3 stones) and pick the maximum; if the final result at the very first index is positive, Alice wins."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
