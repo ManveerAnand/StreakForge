@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "week_start": "2026-07-27",
+  "week_start": "2026-08-03",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-08-02",
-    "question_slug": "stone-game",
-    "question_title": "Stone Game",
-    "difficulty": "Medium",
+    "date": "2026-08-03",
+    "question_slug": "stone-game-iii",
+    "question_title": "Stone Game III",
+    "difficulty": "Hard",
     "tags": [
       "Array",
       "Math",
@@ -16,15 +16,17 @@
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This is a classic Game Theory problem where two players make optimal choices. Since the game has a clear end and the best move at any point depends on the remaining stones, think about how solving the 'endgame' first might help you solve the whole thing.",
+      "Instead of trying to keep track of Alice and Bob's scores separately, try to track the 'relative lead.' Every player is trying to maximize the gap between their score and their opponent's score.",
+      "At any position in the array, you have three choices: take 1, 2, or 3 stones. Your best result from that position is the value of the stones you pick minus the best possible lead the next player can get from the stones you left behind.",
+      "Because the current decision depends on future decisions, try working backward from the end of the array to the beginning. You only need to keep track of the best results from the three positions immediately following your current index.",
+      "Build a list from right to left where each entry represents the maximum lead a player can achieve starting from that stone. For each index, calculate the three possible outcomes (taking 1, 2, or 3 stones) and pick the maximum; if the final result at the very first index is positive, Alice wins."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
