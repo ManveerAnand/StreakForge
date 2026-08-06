@@ -4,14 +4,13 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-08-05",
-    "question_slug": "remove-methods-from-project",
-    "question_title": "Remove Methods From Project",
-    "difficulty": "Medium",
+    "date": "2026-08-06",
+    "question_slug": "smallest-divisible-digit-product-i",
+    "question_title": "Smallest Divisible Digit Product I",
+    "difficulty": "Easy",
     "tags": [
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Graph Theory"
+      "Math",
+      "Enumeration"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -19,11 +18,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
