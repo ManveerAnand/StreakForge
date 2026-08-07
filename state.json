@@ -25,14 +25,16 @@
       "To check if a suffix of length 'L' can satisfy the remaining prime factors, you'll need a way to count the maximum number of 2s, 3s, 5s, and 7s you can pack into 'L' digits. Remember, some digits like 8 or 9 provide multiple factors at once!",
       "Once you find the first position from the right that can be increased to satisfy the requirements, fill the rest of the number greedily. Use as many '1's as possible at the start of the suffix to keep the number small, then place the necessary factors at the very end."
     ],
-    "current_hint_level": 2,
+    "current_hint_level": 3,
     "hints_delivered": [
       1,
-      2
+      2,
+      3
     ],
     "reminders_sent": [
       "10:00",
-      "14:00"
+      "14:00",
+      "18:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
