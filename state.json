@@ -4,15 +4,18 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-08-08",
-    "question_slug": "find-the-lexicographically-smallest-valid-sequence",
-    "question_title": "Find the Lexicographically Smallest Valid Sequence",
+    "date": "2026-08-09",
+    "question_slug": "stone-game-ii",
+    "question_title": "Stone Game II",
     "difficulty": "Medium",
     "tags": [
-      "Two Pointers",
-      "String",
+      "Array",
+      "Math",
       "Dynamic Programming",
-      "Greedy"
+      "Minimax",
+      "Prefix Sum",
+      "Game Theory",
+      "Zero-Sum Game"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -20,12 +23,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
