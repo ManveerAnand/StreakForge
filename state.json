@@ -27,16 +27,18 @@
       "Since the answer for a large pile depends on the answers for smaller piles, a boolean array is perfect for tracking results. Start from 0 stones (which is a losing state because no moves are possible) and build your way up to 'n'.",
       "For every number from 1 to 'n', iterate through all possible square numbers less than or equal to that number. If you find any square such that (current stones - square) is a known losing state, mark the current number as a winning state and move to the next pile size."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "10:00",
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
