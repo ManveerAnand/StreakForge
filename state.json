@@ -4,42 +4,22 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-08-10",
-    "question_slug": "stone-game-iv",
-    "question_title": "Stone Game IV",
-    "difficulty": "Hard",
+    "date": "2026-08-11",
+    "question_slug": "smallest-missing-integer-greater-than-sequential-prefix-sum",
+    "question_title": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
+    "difficulty": "Easy",
     "tags": [
-      "Math",
-      "Dynamic Programming",
-      "Minimax",
-      "Game Theory",
-      "Nim Game",
-      "Sprague–Grundy Theorem",
-      "Zero-Sum Game"
+      "Array",
+      "Hash Table",
+      "Sorting"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This is a classic Game Theory problem that can be broken down into smaller, identical subproblems. If you already knew whether a pile of 1, 2, or 3 stones was a 'winning' or 'losing' position, could you use that to decide what to do with 4 stones?",
-      "Focus on the 'Losing State.' A player wins if they can make a move that forces their opponent into a position from which that opponent cannot win. If there is even one square you can subtract to land your opponent on a 'False' (losing) state, your current state is 'True' (winning).",
-      "To determine if a pile of size 'i' is a winning position, you need to look back at previous results. Try subtracting every possible perfect square (1, 4, 9...) from 'i' and check if any of those resulting remainders were losing positions for the person starting at that remainder.",
-      "Since the answer for a large pile depends on the answers for smaller piles, a boolean array is perfect for tracking results. Start from 0 stones (which is a losing state because no moves are possible) and build your way up to 'n'.",
-      "For every number from 1 to 'n', iterate through all possible square numbers less than or equal to that number. If you find any square such that (current stones - square) is a known losing state, mark the current number as a winning state and move to the next pile size."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
