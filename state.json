@@ -24,16 +24,18 @@
       "You will want to track four specific values for every segment: the length of the longest streak overall, the streak starting from the very left, the streak ending at the very right, and the total length of that segment.",
       "Use a Segment Tree where each node stores these four values. When a character changes, update the leaf and update its ancestors by merging these values, specifically checking if the middle characters match to create a larger combined streak."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "10:00",
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
