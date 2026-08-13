@@ -4,27 +4,29 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-08-12",
-    "question_slug": "length-of-longest-subarray-with-at-most-k-frequency",
-    "question_title": "Length of Longest Subarray With at Most K Frequency",
-    "difficulty": "Medium",
+    "date": "2026-08-13",
+    "question_slug": "longest-substring-of-one-repeating-character",
+    "question_title": "Longest Substring of One Repeating Character",
+    "difficulty": "Hard",
     "tags": [
       "Array",
-      "Hash Table",
-      "Sliding Window"
+      "String",
+      "Segment Tree",
+      "Ordered Set"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This is a \"Range Query\" problem. Since you are updating a single point and need to know a global property after each move, think about a structure that breaks the string into halves, then quarters, recursively.",
+      "Consider how you would combine two adjacent blocks of text. The longest streak in the combined block is either the best from the left side, the best from the right side, or a new streak formed exactly where the two blocks meet.",
+      "To handle that \"meeting point,\" each block needs to know its leftmost character's streak and its rightmost character's streak. If the character at the end of the left block matches the character at the start of the right block, they bridge together!",
+      "You will want to track four specific values for every segment: the length of the longest streak overall, the streak starting from the very left, the streak ending at the very right, and the total length of that segment.",
+      "Use a Segment Tree where each node stores these four values. When a character changes, update the leaf and update its ancestors by merging these values, specifically checking if the middle characters match to create a larger combined streak."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
