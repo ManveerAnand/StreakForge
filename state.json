@@ -4,13 +4,19 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-08-15",
-    "question_slug": "longest-subsequence-with-non-zero-bitwise-xor",
-    "question_title": "Longest Subsequence With Non-Zero Bitwise XOR",
+    "date": "2026-08-16",
+    "question_slug": "stone-game-ix",
+    "question_title": "Stone Game IX",
     "difficulty": "Medium",
     "tags": [
       "Array",
-      "Bit Manipulation"
+      "Math",
+      "Greedy",
+      "Minimax",
+      "Counting",
+      "Game Theory",
+      "Nim Game",
+      "Zero-Sum Game"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -18,12 +24,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
