@@ -24,16 +24,18 @@
       "Don't forget the 'equal' case! If both sides have the same sum, Alice is allowed to pick the side that leads to a higher total score. You should calculate the potential score for both sides and take the maximum.",
       "To reach the final answer, use a table to store the maximum score for every possible starting and ending index. Start with ranges of length two and build up to the full length of the array, using your previously calculated results to find the best split point for each range."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "10:00",
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
