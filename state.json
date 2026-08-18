@@ -4,39 +4,21 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-08-17",
-    "question_slug": "stone-game-v",
-    "question_title": "Stone Game V",
-    "difficulty": "Hard",
+    "date": "2026-08-18",
+    "question_slug": "find-the-largest-almost-missing-integer",
+    "question_title": "Find the Largest Almost Missing Integer",
+    "difficulty": "Easy",
     "tags": [
       "Array",
-      "Math",
-      "Dynamic Programming",
-      "Game Theory"
+      "Hash Table"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This problem asks you to make an optimal decision based on the results of smaller versions of the same problem. Think about how you can break the main array into intervals and solve for the smallest ones first.",
-      "You'll need to calculate the sum of various segments many times. To keep things fast, consider using a prefix sum array so you can find the sum of any sub-row in constant time.",
-      "For any given range of stones, you can try splitting it at every possible position. For each split, compare the sum of the left side and the right side to determine which side Alice gets to keep according to Bob's rules.",
-      "Don't forget the 'equal' case! If both sides have the same sum, Alice is allowed to pick the side that leads to a higher total score. You should calculate the potential score for both sides and take the maximum.",
-      "To reach the final answer, use a table to store the maximum score for every possible starting and ending index. Start with ranges of length two and build up to the full length of the array, using your previously calculated results to find the best split point for each range."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
