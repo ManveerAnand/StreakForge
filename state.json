@@ -26,12 +26,14 @@
       "The constraints show only 15 coins, which is a hint! You can use Bit Manipulation to represent every possible subset of coins and calculate the Least Common Multiple (LCM) for each subset to help with your inclusion-exclusion logic.",
       "Binary search for the answer between 1 and the smallest coin times k. For each middle value, use a bitmask to iterate all coin combinations, calculate their LCM, and add or subtract (Amount / LCM) from your total count based on whether the subset size is odd or even."
     ],
-    "current_hint_level": 1,
+    "current_hint_level": 2,
     "hints_delivered": [
-      1
+      1,
+      2
     ],
     "reminders_sent": [
-      "10:00"
+      "10:00",
+      "14:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
