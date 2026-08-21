@@ -4,26 +4,31 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-08-20",
-    "question_slug": "distribute-elements-into-two-arrays-i",
-    "question_title": "Distribute Elements Into Two Arrays I",
-    "difficulty": "Easy",
+    "date": "2026-08-21",
+    "question_slug": "kth-smallest-amount-with-single-denomination-combination",
+    "question_title": "Kth Smallest Amount With Single Denomination Combination",
+    "difficulty": "Hard",
     "tags": [
       "Array",
-      "Simulation"
+      "Math",
+      "Binary Search",
+      "Bit Manipulation",
+      "Combinatorics",
+      "Number Theory"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This is a searching problem in disguise. Since the number of multiples increases as the target amount increases, you can use Binary Search to find the smallest amount that has at least k multiples below it.",
+      "To make Binary Search work, you need a way to answer: 'Given an amount X, how many unique multiples of my coins are less than or equal to X?'",
+      "Counting unique multiples is tricky because of overlaps; for example, 6 is a multiple of both 2 and 3. You'll need the Inclusion-Exclusion Principle to add individual counts, subtract double-counts of pairs, add back triple-counts, and so on.",
+      "The constraints show only 15 coins, which is a hint! You can use Bit Manipulation to represent every possible subset of coins and calculate the Least Common Multiple (LCM) for each subset to help with your inclusion-exclusion logic.",
+      "Binary search for the answer between 1 and the smallest coin times k. For each middle value, use a bitmask to iterate all coin combinations, calculate their LCM, and add or subtract (Amount / LCM) from your total count based on whether the subset size is odd or even."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
