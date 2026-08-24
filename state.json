@@ -1,31 +1,35 @@
 {
   "version": 1,
-  "week_start": "2026-08-17",
+  "week_start": "2026-08-24",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-08-23",
-    "question_slug": "sum-game",
-    "question_title": "Sum Game",
-    "difficulty": "Medium",
+    "date": "2026-08-24",
+    "question_slug": "stone-game-viii",
+    "question_title": "Stone Game VIII",
+    "difficulty": "Hard",
     "tags": [
+      "Array",
       "Math",
-      "String",
-      "Greedy",
-      "Game Theory"
+      "Dynamic Programming",
+      "Minimax",
+      "Prefix Sum",
+      "Game Theory",
+      "Zero-Sum Game"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This is a game theory problem where the 'state' of the game is simpler than it looks. Notice that whenever you combine the first X stones, the value of the 'new' stone is just the prefix sum of the original stones up to that point.",
+      "Think about the very last possible move. Since the game must stop with one stone, the last player effectively chooses a prefix sum and the game ends. This suggests we should work backwards from the end of the array using Dynamic Programming.",
+      "Let's define a value representing the 'maximum score difference' a player can achieve. If a player acts at index i, they get the prefix sum at i, but then they must subtract the maximum score difference the *next* player can get from the remaining choices.",
+      "To avoid a slow nested loop, observe the relationship between choices. At any index i, a player has two options: either take the current prefix sum and subtract the next player's best result, or skip this index and take whatever the best result was for the next available index.",
+      "The optimal strategy is to maintain a running maximum of the score difference. Start from the total sum of all stones (the last possible prefix) and iterate backwards to the second stone, updating your maximum by comparing the current prefix sum minus the previous maximum."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "10:00",
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
