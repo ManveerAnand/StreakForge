@@ -27,16 +27,18 @@
       "To avoid a slow nested loop, observe the relationship between choices. At any index i, a player has two options: either take the current prefix sum and subtract the next player's best result, or skip this index and take whatever the best result was for the next available index.",
       "The optimal strategy is to maintain a running maximum of the score difference. Start from the total sum of all stones (the last possible prefix) and iterate backwards to the second stone, updating your maximum by comparing the current prefix sum minus the previous maximum."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "10:00",
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
