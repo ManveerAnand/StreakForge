@@ -4,35 +4,18 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-08-28",
-    "question_slug": "lexicographically-smallest-palindromic-permutation-greater-than-target",
-    "question_title": "Lexicographically Smallest Palindromic Permutation Greater Than Target",
-    "difficulty": "Hard",
-    "tags": [
-      "Two Pointers",
-      "String",
-      "Enumeration"
-    ],
+    "date": "2026-08-29",
+    "question_slug": "",
+    "question_title": "",
+    "difficulty": "",
+    "tags": [],
     "is_solved": false,
-    "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This is an enumeration problem where the palindrome property is your best friend. Because the second half must mirror the first, you only actually need to determine the first half of the string.",
-      "To make our string strictly greater than the target, there must be some index 'i' in the first half where our character is larger than the target's character, while every character before 'i' matches the target exactly.",
-      "Try working backwards from the middle of the string toward the beginning. At each position, ask: 'Can I put a character here that is larger than what the target has at this spot?'",
-      "You need to keep track of the character counts available. If you decide to change a character at index 'i', you must ensure you have enough letters left to fill the rest of the first half and their corresponding mirrors.",
-      "Once you find the rightmost index 'i' where you can 'bump up' the character, pick the smallest available character that is greater than target[i]. Then, fill all remaining positions in the first half with the smallest available characters in ascending order to keep the result as small as possible."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "21:00"
-    ],
+    "morning_sent": false,
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
