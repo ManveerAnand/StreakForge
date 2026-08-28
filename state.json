@@ -23,9 +23,16 @@
       "You need to keep track of the character counts available. If you decide to change a character at index 'i', you must ensure you have enough letters left to fill the rest of the first half and their corresponding mirrors.",
       "Once you find the rightmost index 'i' where you can 'bump up' the character, pick the smallest available character that is greater than target[i]. Then, fill all remaining positions in the first half with the smallest available characters in ascending order to keep the result as small as possible."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 4,
+    "hints_delivered": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "reminders_sent": [
+      "21:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
