@@ -5,12 +5,15 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-09-04",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "smallest-stable-index-i",
+    "question_title": "Smallest Stable Index I",
+    "difficulty": "Easy",
+    "tags": [
+      "Array",
+      "Prefix Sum"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
