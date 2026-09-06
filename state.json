@@ -22,9 +22,14 @@
       "To make this efficient, you'll want to store your counts in a 2D grid where one axis represents your progress through the first string and the other represents your progress through the target. Don't forget the base case: there is exactly one way to form an empty target string.",
       "Construct your grid such that each cell represents the number of ways to form a prefix of the target using a prefix of the source. If the current characters match, the cell's value is the sum of the value from the previous target prefix (diagonal) and the previous source prefix (above/left). If they don't match, just carry over the previous count from the source."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 2,
+    "hints_delivered": [
+      1,
+      2
+    ],
+    "reminders_sent": [
+      "14:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
