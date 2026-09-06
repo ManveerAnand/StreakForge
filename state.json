@@ -4,25 +4,27 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-09-05",
-    "question_slug": "smallest-stable-index-ii",
-    "question_title": "Smallest Stable Index II",
-    "difficulty": "Medium",
+    "date": "2026-09-06",
+    "question_slug": "distinct-subsequences",
+    "question_title": "Distinct Subsequences",
+    "difficulty": "Hard",
     "tags": [
-      "Array",
-      "Prefix Sum"
+      "String",
+      "Dynamic Programming"
     ],
     "is_solved": false,
     "morning_sent": true,
-    "hints_generated": false,
-    "hints_cache": [],
+    "hints_generated": true,
+    "hints_cache": [
+      "This problem follows a classic pattern where you solve a big puzzle by breaking it into smaller versions of itself. Since we are comparing two strings and looking for a count, this is a Dynamic Programming problem in disguise.",
+      "Try thinking about the strings from the end to the beginning. At any point, if the characters at your current positions match, you are faced with a fork in the road: you can either 'consume' both characters or ignore the character in the longer string and keep looking.",
+      "The core logic depends on a simple addition: if the characters match, your total ways for that sub-problem is the sum of (ways if you use the match) + (ways if you skip the match). If they don't match, you only have one option: skip the character in the longer string.",
+      "To make this efficient, you'll want to store your counts in a 2D grid where one axis represents your progress through the first string and the other represents your progress through the target. Don't forget the base case: there is exactly one way to form an empty target string.",
+      "Construct your grid such that each cell represents the number of ways to form a prefix of the target using a prefix of the source. If the current characters match, the cell's value is the sum of the value from the previous target prefix (diagonal) and the previous source prefix (above/left). If they don't match, just carry over the previous count from the source."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
