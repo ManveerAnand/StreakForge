@@ -22,13 +22,15 @@
       "To fix the overcounting, you need to keep track of the 'added value' from each letter's previous occurrence. An array of size 26 can store the total count of subsequences we had just before each letter was last processed.",
       "The core logic: current total = (previous total * 2) - (total just before the last time we saw this character). Don't forget to add 1 for the new character itself or handle the 'empty' subsequence case carefully, and apply the modulo at every step."
     ],
-    "current_hint_level": 2,
+    "current_hint_level": 3,
     "hints_delivered": [
       1,
-      2
+      2,
+      3
     ],
     "reminders_sent": [
-      "14:00"
+      "14:00",
+      "18:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
