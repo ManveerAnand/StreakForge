@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "week_start": "2026-08-31",
+  "week_start": "2026-09-07",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-09-06",
-    "question_slug": "distinct-subsequences",
-    "question_title": "Distinct Subsequences",
+    "date": "2026-09-07",
+    "question_slug": "distinct-subsequences-ii",
+    "question_title": "Distinct Subsequences II",
     "difficulty": "Hard",
     "tags": [
       "String",
@@ -16,24 +16,15 @@
     "morning_sent": true,
     "hints_generated": true,
     "hints_cache": [
-      "This problem follows a classic pattern where you solve a big puzzle by breaking it into smaller versions of itself. Since we are comparing two strings and looking for a count, this is a Dynamic Programming problem in disguise.",
-      "Try thinking about the strings from the end to the beginning. At any point, if the characters at your current positions match, you are faced with a fork in the road: you can either 'consume' both characters or ignore the character in the longer string and keep looking.",
-      "The core logic depends on a simple addition: if the characters match, your total ways for that sub-problem is the sum of (ways if you use the match) + (ways if you skip the match). If they don't match, you only have one option: skip the character in the longer string.",
-      "To make this efficient, you'll want to store your counts in a 2D grid where one axis represents your progress through the first string and the other represents your progress through the target. Don't forget the base case: there is exactly one way to form an empty target string.",
-      "Construct your grid such that each cell represents the number of ways to form a prefix of the target using a prefix of the source. If the current characters match, the cell's value is the sum of the value from the previous target prefix (diagonal) and the previous source prefix (above/left). If they don't match, just carry over the previous count from the source."
+      "Since we are building a count based on the string's length, this fits the Dynamic Programming pattern. Think about how the total number of unique subsequences grows as you process the string one letter at a time from left to right.",
+      "If every character in the string were unique, each new letter would double your current count (because you can either add the new letter to every existing subsequence or not) and add itself as a new single-letter subsequence.",
+      "When characters repeat, the 'doubling' logic overcounts. Specifically, when you see a letter for the second time, you are recreating all the subsequences that were already counted the last time that same letter appeared.",
+      "To fix the overcounting, you need to keep track of the 'added value' from each letter's previous occurrence. An array of size 26 can store the total count of subsequences we had just before each letter was last processed.",
+      "The core logic: current total = (previous total * 2) - (total just before the last time we saw this character). Don't forget to add 1 for the new character itself or handle the 'empty' subsequence case carefully, and apply the modulo at every step."
     ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
