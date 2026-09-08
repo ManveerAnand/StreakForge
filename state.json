@@ -5,12 +5,14 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-09-08",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "count-commas-in-range",
+    "question_title": "Count Commas in Range",
+    "difficulty": "Easy",
+    "tags": [
+      "Math"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
