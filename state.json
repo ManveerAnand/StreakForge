@@ -5,14 +5,25 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-09-12",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "maximum-score-of-non-overlapping-intervals",
+    "question_title": "Maximum Score of Non-overlapping Intervals",
+    "difficulty": "Hard",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Dynamic Programming",
+      "Sorting"
+    ],
     "is_solved": false,
-    "morning_sent": false,
-    "hints_generated": false,
-    "hints_cache": [],
+    "morning_sent": true,
+    "hints_generated": true,
+    "hints_cache": [
+      "This fits the 'pick or skip' pattern common in Dynamic Programming. Since we only need to pick up to 4 intervals, we can track our progress based on how many we've chosen so far.",
+      "Sorting is essential here. If you sort intervals by their start times, you can use Binary Search to instantly find the next available interval that doesn't overlap with your current choice.",
+      "Try building a table that stores the maximum score possible for picking 1, 2, 3, and 4 intervals. For any interval 'i', its potential score is its own weight plus the best score possible from picking fewer intervals that start after 'i' ends.",
+      "To handle the 'lexicographically smallest' requirement, don't just store the max score in your DP table. Store the list of indices that produced that score, and update them only if you find a higher score or an equal score with 'smaller' indices.",
+      "Process the intervals from right to left (backwards). For each interval, use binary search to find the best results already calculated for 'k-1' intervals that start after the current one ends, then update the global best for 'k' intervals."
+    ],
     "current_hint_level": 0,
     "hints_delivered": [],
     "reminders_sent": [],
