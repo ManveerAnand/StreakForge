@@ -24,9 +24,14 @@
       "To handle the 'lexicographically smallest' requirement, don't just store the max score in your DP table. Store the list of indices that produced that score, and update them only if you find a higher score or an equal score with 'smaller' indices.",
       "Process the intervals from right to left (backwards). For each interval, use binary search to find the best results already calculated for 'k-1' intervals that start after the current one ends, then update the global best for 'k' intervals."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 2,
+    "hints_delivered": [
+      1,
+      2
+    ],
+    "reminders_sent": [
+      "14:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
