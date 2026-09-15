@@ -4,38 +4,18 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-09-15",
-    "question_slug": "maximum-number-of-non-overlapping-palindrome-substrings",
-    "question_title": "Maximum Number of Non-overlapping Palindrome Substrings",
-    "difficulty": "Hard",
-    "tags": [
-      "Two Pointers",
-      "String",
-      "Dynamic Programming",
-      "Greedy"
-    ],
+    "date": "2026-09-16",
+    "question_slug": "",
+    "question_title": "",
+    "difficulty": "",
+    "tags": [],
     "is_solved": false,
-    "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This problem asks for a maximum count, which often suggests Dynamic Programming, but the 'non-overlapping' and 'at least length k' constraints actually allow for a clever Greedy strategy.",
-      "Try scanning the string from left to right. The moment you find the *earliest possible* valid palindrome that meets the length requirement, grab it and move your starting line to the very next character.",
-      "Crucial insight: You only need to check for palindromes of length k and k+1. Why? Because any longer palindrome (like k+2) would already contain a smaller palindrome of length k or k+1 within it.",
-      "To check for these palindromes efficiently, use the 'expand from center' technique at each position in the string, but only keep track of the end of the last palindrome you 'locked in' to avoid overlaps.",
-      "Iterate through the string with a pointer. At each step, check if a palindrome of length k or k+1 ends at this position and starts after your last chosen segment. If it does, increment your count and jump your pointer forward."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "morning_sent": false,
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
