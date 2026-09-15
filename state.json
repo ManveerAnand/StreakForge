@@ -24,9 +24,14 @@
       "To check for these palindromes efficiently, use the 'expand from center' technique at each position in the string, but only keep track of the end of the last palindrome you 'locked in' to avoid overlaps.",
       "Iterate through the string with a pointer. At each step, check if a palindrome of length k or k+1 ends at this position and starts after your last chosen segment. If it does, increment your count and jump your pointer forward."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 2,
+    "hints_delivered": [
+      1,
+      2
+    ],
+    "reminders_sent": [
+      "14:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
