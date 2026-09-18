@@ -24,9 +24,14 @@
       "Once you have your list of valid, stable ranges, notice that some might be nested inside others. To maximize the number of pieces, you should prioritize ranges that end as early as possible.",
       "Collect the stable ranges for each character, then sort them by their end index. Iterate through them greedily, picking a range only if it doesn't overlap with the previous one you selected."
     ],
-    "current_hint_level": 0,
-    "hints_delivered": [],
-    "reminders_sent": [],
+    "current_hint_level": 2,
+    "hints_delivered": [
+      1,
+      2
+    ],
+    "reminders_sent": [
+      "14:00"
+    ],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
