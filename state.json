@@ -23,15 +23,17 @@
       "Each node in your Segment Tree should store two things: the total product of its entire range modulo $k$, and an array of size $k$ where each index $i$ stores how many prefixes in that range result in remainder $i$.",
       "To solve a query, update the tree at the specified index, then perform a range query from the 'start' index to the end of the array. The final merged node for that range will contain the count of prefixes for the target remainder $x$."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
