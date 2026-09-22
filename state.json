@@ -4,37 +4,18 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-09-22",
-    "question_slug": "find-x-value-of-array-ii",
-    "question_title": "Find X Value of Array II",
-    "difficulty": "Hard",
-    "tags": [
-      "Array",
-      "Math",
-      "Segment Tree"
-    ],
+    "date": "2026-09-23",
+    "question_slug": "",
+    "question_title": "",
+    "difficulty": "",
+    "tags": [],
     "is_solved": false,
-    "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This is a dynamic range problem where updates persist. Think about a data structure, like a Segment Tree, that allows you to update a single element and quickly re-calculate information for any given range.",
-      "Since the modulus $k$ is extremely small (only up to 5), the number of possible remainders is very limited. Consider storing the count of every possible remainder (0 through $k-1$) within each segment of your data structure.",
-      "When combining two adjacent blocks of the array, the remainder of a prefix that ends in the second block is the (total product of the first block × the remainder of the prefix in the second block) modulo $k$.",
-      "Each node in your Segment Tree should store two things: the total product of its entire range modulo $k$, and an array of size $k$ where each index $i$ stores how many prefixes in that range result in remainder $i$.",
-      "To solve a query, update the tree at the specified index, then perform a range query from the 'start' index to the end of the array. The final merged node for that range will contain the count of prefixes for the target remainder $x$."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "morning_sent": false,
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
