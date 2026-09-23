@@ -5,12 +5,18 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-09-23",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "minimum-operations-to-reduce-x-to-zero",
+    "question_title": "Minimum Operations to Reduce X to Zero",
+    "difficulty": "Medium",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Binary Search",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
