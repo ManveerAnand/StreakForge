@@ -26,15 +26,17 @@
       "Use a Hash Table (or Set) at each level to automatically handle duplicates. When you hit a comma, it means you've finished one part of a union; when you hit a closing brace, you've finished an entire group that needs to be multiplied with whatever came before it.",
       "Maintain a stack of 'groups' and 'current' word sets. A new brace pushes a fresh state; a comma saves the current set into the group; a closing brace flattens that group into a single set and concatenates it with the level below. Finally, sort the unique results."
     ],
-    "current_hint_level": 3,
+    "current_hint_level": 4,
     "hints_delivered": [
       1,
       2,
-      3
+      3,
+      4
     ],
     "reminders_sent": [
       "14:00",
-      "18:00"
+      "18:00",
+      "21:00"
     ],
     "submissions_analyzed": [],
     "auto_solved": false,
