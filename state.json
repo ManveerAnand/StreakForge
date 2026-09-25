@@ -4,40 +4,18 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-09-25",
-    "question_slug": "brace-expansion-ii",
-    "question_title": "Brace Expansion II",
-    "difficulty": "Hard",
-    "tags": [
-      "Hash Table",
-      "String",
-      "Backtracking",
-      "Stack",
-      "Breadth-First Search",
-      "Sorting"
-    ],
+    "date": "2026-09-26",
+    "question_slug": "",
+    "question_title": "",
+    "difficulty": "",
+    "tags": [],
     "is_solved": false,
-    "morning_sent": true,
-    "hints_generated": true,
-    "hints_cache": [
-      "This is a classic parsing problem. Think of it like a calculator where commas are 'addition' (union) and side-by-side expressions are 'multiplication' (concatenation).",
-      "Since the expression has nested braces, you can use a Stack or Recursion. A Stack is great for keeping track of your 'current' set of words while you dive into a deeper level of braces.",
-      "Try to process the string character by character. You'll need to handle four cases: a letter, a comma, an opening brace, and a closing brace. Each one changes how you combine your current words.",
-      "Use a Hash Table (or Set) at each level to automatically handle duplicates. When you hit a comma, it means you've finished one part of a union; when you hit a closing brace, you've finished an entire group that needs to be multiplied with whatever came before it.",
-      "Maintain a stack of 'groups' and 'current' word sets. A new brace pushes a fresh state; a comma saves the current set into the group; a closing brace flattens that group into a single set and concatenates it with the level below. Finally, sort the unique results."
-    ],
-    "current_hint_level": 4,
-    "hints_delivered": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "morning_sent": false,
+    "hints_generated": false,
+    "hints_cache": [],
+    "current_hint_level": 0,
+    "hints_delivered": [],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
