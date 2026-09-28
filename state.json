@@ -5,12 +5,16 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-09-28",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "maximum-nesting-depth-of-the-parentheses",
+    "question_title": "Maximum Nesting Depth of the Parentheses",
+    "difficulty": "Easy",
+    "tags": [
+      "String",
+      "Stack",
+      "Bracket Sequences"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
