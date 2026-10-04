@@ -5,12 +5,18 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-10-04",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "valid-parenthesis-string",
+    "question_title": "Valid Parenthesis String",
+    "difficulty": "Medium",
+    "tags": [
+      "String",
+      "Dynamic Programming",
+      "Stack",
+      "Greedy",
+      "Bracket Sequences"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
