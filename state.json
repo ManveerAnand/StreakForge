@@ -5,12 +5,17 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-10-15",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "subarrays-distinct-element-sum-of-squares-i",
+    "question_title": "Subarrays Distinct Element Sum of Squares I",
+    "difficulty": "Easy",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Binary Indexed Tree",
+      "Segment Tree"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
