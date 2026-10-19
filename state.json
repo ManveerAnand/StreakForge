@@ -1,16 +1,20 @@
 {
   "version": 1,
-  "week_start": "2026-10-12",
+  "week_start": "2026-10-19",
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-10-18",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "date": "2026-10-19",
+    "question_slug": "find-target-indices-after-sorting-array",
+    "question_title": "Find Target Indices After Sorting Array",
+    "difficulty": "Easy",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sorting"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
