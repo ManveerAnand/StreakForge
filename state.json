@@ -4,13 +4,16 @@
   "auto_solves_this_week": 0,
   "auto_solve_dates": [],
   "today": {
-    "date": "2026-10-24",
-    "question_slug": "count-days-spent-together",
-    "question_title": "Count Days Spent Together",
-    "difficulty": "Easy",
+    "date": "2026-10-25",
+    "question_slug": "number-of-closed-islands",
+    "question_title": "Number of Closed Islands",
+    "difficulty": "Medium",
     "tags": [
-      "Math",
-      "String"
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union-Find",
+      "Matrix"
     ],
     "is_solved": false,
     "morning_sent": true,
@@ -18,11 +21,7 @@
     "hints_cache": [],
     "current_hint_level": 0,
     "hints_delivered": [],
-    "reminders_sent": [
-      "14:00",
-      "18:00",
-      "21:00"
-    ],
+    "reminders_sent": [],
     "submissions_analyzed": [],
     "auto_solved": false,
     "quiz_sent": false,
