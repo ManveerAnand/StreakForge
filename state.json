@@ -5,12 +5,17 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-11-05",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "find-the-distance-value-between-two-arrays",
+    "question_title": "Find the Distance Value Between Two Arrays",
+    "difficulty": "Easy",
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Binary Search",
+      "Sorting"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
