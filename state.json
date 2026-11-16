@@ -5,12 +5,15 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-11-16",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "calculate-digit-sum-of-a-string",
+    "question_title": "Calculate Digit Sum of a String",
+    "difficulty": "Easy",
+    "tags": [
+      "String",
+      "Simulation"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
