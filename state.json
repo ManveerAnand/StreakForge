@@ -5,12 +5,16 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-11-19",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "minimum-score-by-changing-two-elements",
+    "question_title": "Minimum Score by Changing Two Elements",
+    "difficulty": "Medium",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
