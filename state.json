@@ -5,12 +5,18 @@
   "auto_solve_dates": [],
   "today": {
     "date": "2026-11-21",
-    "question_slug": "",
-    "question_title": "",
-    "difficulty": "",
-    "tags": [],
+    "question_slug": "find-subtree-sizes-after-changes",
+    "question_title": "Find Subtree Sizes After Changes",
+    "difficulty": "Medium",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "String",
+      "Tree",
+      "Depth-First Search"
+    ],
     "is_solved": false,
-    "morning_sent": false,
+    "morning_sent": true,
     "hints_generated": false,
     "hints_cache": [],
     "current_hint_level": 0,
